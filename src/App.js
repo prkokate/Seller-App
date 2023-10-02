@@ -1,6 +1,5 @@
 
-
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css';
 import Navbar from './components/Navbar';
 // import Carsitem from './components/Carsitem'
@@ -17,6 +16,7 @@ import {
 
 
 export default function App() {
+  const [page,setpage]=useState(1);
   return (
 <div className="App">
   <div className="container">
@@ -25,7 +25,14 @@ export default function App() {
   
         <Navbar/>
     <Routes>
-    <Route exact path="/" element={<Cars/>} />
+    <Route path="/" element={<Cars pg={setpage} />} />
+    <Route path={`/${page}`} element={<Cars pg={setpage} />} />
+    <Route path="/3" element={<Cars pg={setpage} />} />
+    <Route path="/4" element={<Cars pg={setpage} />} />
+    <Route path="/5" element={<Cars pg={setpage} />} />
+    <Route path="/6" element={<Cars pg={setpage} />} />
+   
+    
         
     </Routes>
         </Router>
