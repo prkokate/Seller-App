@@ -1,0 +1,55 @@
+.title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.year{
+    border-radius: 0.7rem;
+    border: 0.1rem solid rgb(53, 53, 131);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: dashed;
+    font-weight: bold;
+    background: transparent;
+}
+
+.foot{
+    border-top: 0.3px solid rgb(149, 149, 151);
+    display: flex;
+    padding-top: 1rem;
+    justify-content: space-between;
+}
+
+.price{
+    font-size:15px ;
+    /* font-weight: bold; */
+}
+
+.right{
+    display: flex;
+    justify-content: space-between;
+}
+
+.like{
+    background-color: rgb(185, 226, 212);
+    border-radius: .5rem;
+    padding: 0.5rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-right: 0.8rem;
+    cursor: pointer;
+}
+
+.card{
+    border-radius: 0.7rem;
+}
+.card-img-top{
+    border-radius: 0.7rem ;
+    border: 1rem solid white;
+    
+}

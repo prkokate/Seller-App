@@ -1,0 +1,11 @@
+.container-fluid{
+    width: 80%;
+    background-color:rgb(216, 210, 210) !important ;
+    padding: 0.5rem;
+    border-radius: 1rem;
+   
+}
+
+.navbar{
+    background: transparent;
+}
