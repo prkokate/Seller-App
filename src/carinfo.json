@@ -1,421 +1,479 @@
 [{
   "id": 1,
-  "brand": "Lamborghini",
-  "year": 2015,
-  "price": 115,
-  "type": "Aventador",
-  "gear": "automatic"
+  "brand": "Cadillac",
+  "year": 2018,
+  "price": 489,
+  "passenger": 2,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 2,
-  "brand": "Infiniti",
-  "year": 2021,
-  "price": 996,
-  "type": "G37",
-  "gear": "manual"
+  "brand": "Lexus",
+  "year": 2018,
+  "price": 979,
+  "passenger": 6,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 3,
-  "brand": "Chevrolet",
-  "year": 2023,
-  "price": 871,
-  "type": "Colorado",
-  "gear": "manual"
+  "brand": "Ford",
+  "year": 2020,
+  "price": 189,
+  "passenger": 6,
+  "type": "electric",
+  "gear" : "automatic"
 }, {
   "id": 4,
-  "brand": "Lexus",
-  "year": 2017,
-  "price": 908,
-  "type": "GS",
-  "gear": "automatic"
+  "brand": "Chevrolet",
+  "year": 2022,
+  "price": 752,
+  "passenger": 4,
+  "type": "gasoline",
+  "gear" : "automatic"
 }, {
   "id": 5,
-  "brand": "Buick",
-  "year": 2022,
-  "price": 396,
-  "type": "LeSabre",
-  "gear": "manual"
+  "brand": "Infiniti",
+  "year": 2015,
+  "price": 767,
+  "passenger": 3,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 6,
-  "brand": "Mazda",
-  "year": 2018,
-  "price": 753,
-  "type": "Miata MX-5",
-  "gear": "automatic"
+  "brand": "Chrysler",
+  "year": 2019,
+  "price": 827,
+  "passenger": 6,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 7,
-  "brand": "Daewoo",
-  "year": 2022,
-  "price": 747,
-  "type": "Lanos",
-  "gear": "automatic"
+  "brand": "Aston Martin",
+  "year": 2017,
+  "price": 761,
+  "passenger": 2,
+  "type": "diesel",
+  "gear" : "automatic"
 }, {
   "id": 8,
-  "brand": "Pontiac",
-  "year": 2014,
-  "price": 115,
-  "type": "Grand Prix",
-  "gear": "manual"
+  "brand": "Buick",
+  "year": 2018,
+  "price": 591,
+  "passenger": 3,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 9,
-  "brand": "Mazda",
-  "year": 2023,
-  "price": 729,
-  "type": "Protege",
-  "gear": "manual"
+  "brand": "Toyota",
+  "year": 2014,
+  "price": 444,
+  "passenger": 4,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 10,
-  "brand": "Kia",
-  "year": 2019,
-  "price": 257,
-  "type": "Borrego",
-  "gear": "automatic"
+  "brand": "Buick",
+  "year": 2014,
+  "price": 789,
+  "passenger": 5,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 11,
-  "brand": "Isuzu",
-  "year": 2016,
-  "price": 536,
-  "type": "Stylus",
-  "gear": "automatic"
+  "brand": "Kia",
+  "year": 2023,
+  "price": 298,
+  "passenger": 6,
+  "type": "diesel",
+  "gear" : "automatic"
 }, {
   "id": 12,
-  "brand": "Bugatti",
-  "year": 2017,
-  "price": 950,
-  "type": "Veyron",
-  "gear": "automatic"
+  "brand": "Saturn",
+  "year": 2023,
+  "price": 862,
+  "passenger": 3,
+  "type": "gasoline",
+  "gear" : "automatic"
 }, {
   "id": 13,
-  "brand": "Chevrolet",
-  "year": 2022,
-  "price": 983,
-  "type": "Corvette",
-  "gear": "automatic"
+  "brand": "Pontiac",
+  "year": 2018,
+  "price": 618,
+  "passenger": 6,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 14,
-  "brand": "Pontiac",
-  "year": 2020,
-  "price": 1000,
-  "type": "G5",
-  "gear": "automatic"
+  "brand": "Land Rover",
+  "year": 2019,
+  "price": 859,
+  "passenger": 6,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 15,
-  "brand": "Cadillac",
-  "year": 2022,
-  "price": 402,
-  "type": "CTS",
-  "gear": "manual"
+  "brand": "Mazda",
+  "year": 2014,
+  "price": 274,
+  "passenger": 3,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 16,
-  "brand": "Dodge",
-  "year": 2019,
-  "price": 976,
-  "type": "Ram Van 3500",
-  "gear": "automatic"
+  "brand": "Jaguar",
+  "year": 2023,
+  "price": 217,
+  "passenger": 2,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 17,
-  "brand": "Ford",
-  "year": 2021,
-  "price": 567,
-  "type": "Falcon",
-  "gear": "automatic"
+  "brand": "Plymouth",
+  "year": 2015,
+  "price": 860,
+  "passenger": 3,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 18,
-  "brand": "Volvo",
-  "year": 2016,
-  "price": 802,
-  "type": "XC70",
-  "gear": "automatic"
+  "brand": "Chevrolet",
+  "year": 2023,
+  "price": 720,
+  "passenger": 4,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 19,
-  "brand": "Mitsubishi",
-  "year": 2014,
-  "price": 678,
-  "type": "Eclipse",
-  "gear": "automatic"
+  "brand": "Ford",
+  "year": 2023,
+  "price": 291,
+  "passenger": 5,
+  "type": "diesel",
+  "gear" : "automatic"
 }, {
   "id": 20,
-  "brand": "Audi",
-  "year": 2018,
-  "price": 884,
-  "type": "A4",
-  "gear": "automatic"
+  "brand": "Volvo",
+  "year": 2021,
+  "price": 747,
+  "passenger": 4,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 21,
-  "brand": "GMC",
+  "brand": "Mazda",
   "year": 2014,
-  "price": 795,
-  "type": "Yukon XL 1500",
-  "gear": "manual"
+  "price": 346,
+  "passenger": 5,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 22,
-  "brand": "Lexus",
+  "brand": "BMW",
   "year": 2017,
-  "price": 736,
-  "type": "LS",
-  "gear": "automatic"
+  "price": 129,
+  "passenger": 5,
+  "type": "gasoline",
+  "gear" : "automatic"
 }, {
   "id": 23,
-  "brand": "Ford",
-  "year": 2016,
-  "price": 939,
-  "type": "E250",
-  "gear": "manual"
+  "brand": "GMC",
+  "year": 2023,
+  "price": 943,
+  "passenger": 3,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 24,
-  "brand": "Lincoln",
-  "year": 2018,
-  "price": 133,
-  "type": "Continental",
-  "gear": "manual"
+  "brand": "Chevrolet",
+  "year": 2017,
+  "price": 260,
+  "passenger": 6,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 25,
-  "brand": "Land Rover",
-  "year": 2020,
-  "price": 851,
-  "type": "Freelander",
-  "gear": "automatic"
+  "brand": "Ford",
+  "year": 2018,
+  "price": 486,
+  "passenger": 6,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 26,
-  "brand": "GMC",
-  "year": 2015,
-  "price": 753,
-  "type": "Jimmy",
-  "gear": "automatic"
+  "brand": "Audi",
+  "year": 2021,
+  "price": 392,
+  "passenger": 2,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 27,
-  "brand": "Saturn",
-  "year": 2022,
-  "price": 558,
-  "type": "S-Series",
-  "gear": "manual"
+  "brand": "Chevrolet",
+  "year": 2014,
+  "price": 228,
+  "passenger": 2,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 28,
-  "brand": "Toyota",
-  "year": 2015,
-  "price": 685,
-  "type": "Tercel",
-  "gear": "manual"
+  "brand": "Cadillac",
+  "year": 2017,
+  "price": 401,
+  "passenger": 2,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 29,
-  "brand": "Honda",
-  "year": 2018,
-  "price": 415,
-  "type": "Odyssey",
-  "gear": "manual"
+  "brand": "Oldsmobile",
+  "year": 2019,
+  "price": 821,
+  "passenger": 6,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 30,
-  "brand": "Mazda",
+  "brand": "Chevrolet",
   "year": 2015,
-  "price": 667,
-  "type": "626",
-  "gear": "manual"
+  "price": 513,
+  "passenger": 4,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 31,
-  "brand": "Volkswagen",
+  "brand": "Volvo",
   "year": 2022,
-  "price": 219,
-  "type": "Jetta",
-  "gear": "automatic"
+  "price": 885,
+  "passenger": 2,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 32,
-  "brand": "Porsche",
-  "year": 2015,
-  "price": 203,
-  "type": "911",
-  "gear": "manual"
+  "brand": "Toyota",
+  "year": 2014,
+  "price": 615,
+  "passenger": 5,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 33,
-  "brand": "Volvo",
-  "year": 2019,
-  "price": 414,
-  "type": "V40",
-  "gear": "automatic"
+  "brand": "Austin",
+  "year": 2021,
+  "price": 794,
+  "passenger": 6,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 34,
-  "brand": "Mazda",
-  "year": 2015,
-  "price": 384,
-  "type": "B-Series",
-  "gear": "manual"
+  "brand": "Jeep",
+  "year": 2023,
+  "price": 457,
+  "passenger": 2,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 35,
-  "brand": "Mazda",
-  "year": 2022,
-  "price": 421,
-  "type": "Mazda3",
-  "gear": "automatic"
+  "brand": "Mitsubishi",
+  "year": 2017,
+  "price": 520,
+  "passenger": 6,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 36,
-  "brand": "Chevrolet",
+  "brand": "Mazda",
   "year": 2020,
-  "price": 660,
-  "type": "Suburban 1500",
-  "gear": "automatic"
+  "price": 614,
+  "passenger": 3,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 37,
-  "brand": "Chevrolet",
-  "year": 2015,
-  "price": 198,
-  "type": "Astro",
-  "gear": "manual"
+  "brand": "Ford",
+  "year": 2020,
+  "price": 803,
+  "passenger": 6,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 38,
-  "brand": "Chevrolet",
-  "year": 2015,
-  "price": 402,
-  "type": "Tahoe",
-  "gear": "automatic"
+  "brand": "Mazda",
+  "year": 2017,
+  "price": 441,
+  "passenger": 3,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 39,
-  "brand": "Honda",
-  "year": 2015,
-  "price": 183,
-  "type": "Accord",
-  "gear": "manual"
+  "brand": "Mitsubishi",
+  "year": 2023,
+  "price": 686,
+  "passenger": 3,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 40,
-  "brand": "Ford",
-  "year": 2022,
-  "price": 259,
-  "type": "Laser",
-  "gear": "automatic"
-}, {
-  "id": 41,
-  "brand": "Chevrolet",
-  "year": 2021,
-  "price": 617,
-  "type": "Corvette",
-  "gear": "manual"
-}, {
-  "id": 42,
   "brand": "Mercedes-Benz",
   "year": 2018,
-  "price": 670,
-  "type": "S-Class",
-  "gear": "automatic"
+  "price": 487,
+  "passenger": 4,
+  "type": "diesel",
+  "gear" : "manual"
+}, {
+  "id": 41,
+  "brand": "Volkswagen",
+  "year": 2019,
+  "price": 895,
+  "passenger": 4,
+  "type": "diesel",
+  "gear" : "manual"
+}, {
+  "id": 42,
+  "brand": "Eagle",
+  "year": 2015,
+  "price": 983,
+  "passenger": 4,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 43,
   "brand": "Nissan",
-  "year": 2021,
-  "price": 909,
-  "type": "GT-R",
-  "gear": "manual"
+  "year": 2016,
+  "price": 529,
+  "passenger": 3,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 44,
-  "brand": "Lincoln",
-  "year": 2014,
-  "price": 566,
-  "type": "MKX",
-  "gear": "automatic"
+  "brand": "Mercury",
+  "year": 2015,
+  "price": 454,
+  "passenger": 3,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 45,
-  "brand": "Chevrolet",
-  "year": 2018,
-  "price": 389,
-  "type": "Caprice Classic",
-  "gear": "automatic"
+  "brand": "Dodge",
+  "year": 2021,
+  "price": 810,
+  "passenger": 3,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 46,
-  "brand": "Cadillac",
+  "brand": "Mercedes-Benz",
   "year": 2016,
-  "price": 872,
-  "type": "Escalade",
-  "gear": "automatic"
+  "price": 344,
+  "passenger": 2,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 47,
-  "brand": "Honda",
-  "year": 2021,
-  "price": 670,
-  "type": "Accord",
-  "gear": "manual"
+  "brand": "Saab",
+  "year": 2016,
+  "price": 794,
+  "passenger": 2,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 48,
   "brand": "BMW",
-  "year": 2020,
-  "price": 658,
-  "type": "M",
-  "gear": "automatic"
+  "year": 2017,
+  "price": 315,
+  "passenger": 6,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 49,
-  "brand": "Lamborghini",
-  "year": 2018,
-  "price": 523,
-  "type": "Diablo",
-  "gear": "manual"
+  "brand": "Subaru",
+  "year": 2016,
+  "price": 988,
+  "passenger": 2,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 50,
-  "brand": "Toyota",
-  "year": 2020,
-  "price": 289,
-  "type": "Camry",
-  "gear": "automatic"
+  "brand": "Honda",
+  "year": 2017,
+  "price": 205,
+  "passenger": 6,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 51,
-  "brand": "Eagle",
-  "year": 2020,
-  "price": 889,
-  "type": "Vision",
-  "gear": "automatic"
+  "brand": "GMC",
+  "year": 2023,
+  "price": 303,
+  "passenger": 6,
+  "type": "diesel",
+  "gear" : "manual"
 }, {
   "id": 52,
-  "brand": "Volkswagen",
-  "year": 2019,
-  "price": 534,
-  "type": "Routan",
-  "gear": "manual"
+  "brand": "Ford",
+  "year": 2021,
+  "price": 219,
+  "passenger": 6,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 53,
-  "brand": "GMC",
-  "year": 2016,
-  "price": 811,
-  "type": "Savana Cargo Van",
-  "gear": "automatic"
+  "brand": "Dodge",
+  "year": 2023,
+  "price": 299,
+  "passenger": 3,
+  "type": "electric",
+  "gear" : "manual"
 }, {
   "id": 54,
-  "brand": "GMC",
-  "year": 2022,
-  "price": 563,
-  "type": "3500 Club Coupe",
-  "gear": "manual"
+  "brand": "Mercedes-Benz",
+  "year": 2019,
+  "price": 215,
+  "passenger": 4,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 55,
-  "brand": "Chevrolet",
-  "year": 2022,
-  "price": 599,
-  "type": "Lumina APV",
-  "gear": "automatic"
+  "brand": "Chrysler",
+  "year": 2018,
+  "price": 414,
+  "passenger": 5,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 56,
-  "brand": "Volkswagen",
-  "year": 2020,
-  "price": 577,
-  "type": "CC",
-  "gear": "automatic"
+  "brand": "Ford",
+  "year": 2021,
+  "price": 574,
+  "passenger": 3,
+  "type": "gasoline",
+  "gear" : "automatic"
 }, {
   "id": 57,
-  "brand": "Mitsubishi",
-  "year": 2018,
-  "price": 540,
-  "type": "Raider",
-  "gear": "manual"
+  "brand": "Subaru",
+  "year": 2020,
+  "price": 139,
+  "passenger": 2,
+  "type": "gasoline"
 }, {
   "id": 58,
-  "brand": "Mitsubishi",
-  "year": 2021,
-  "price": 922,
-  "type": "Galant",
-  "gear": "automatic"
+  "brand": "MINI",
+  "year": 2015,
+  "price": 225,
+  "passenger": 3,
+  "type": "gasoline",
+  "gear" : "manual"
 }, {
   "id": 59,
-  "brand": "Chrysler",
-  "year": 2015,
-  "price": 271,
-  "type": "300",
-  "gear": "manual"
+  "brand": "Nissan",
+  "year": 2020,
+  "price": 366,
+  "passenger": 2,
+  "type": "gasoline"
 }, {
   "id": 60,
-  "brand": "Volvo",
-  "year": 2022,
-  "price": 261,
-  "type": "V70",
-  "gear": "manual"
+  "brand": "Toyota",
+  "year": 2015,
+  "price": 647,
+  "passenger": 5,
+  "type": "electric",
+  "gear" : "manual"
 }]

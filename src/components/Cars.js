@@ -30,7 +30,7 @@ export default function Cars(props) {
     } ,[pointer] );
 
     const handleNext=()=>{
-        if(pointer>=30){
+        if(pointer>=60){
             setpage(1);
             setptr(0);
         }
@@ -84,7 +84,7 @@ const Navtopage=(pge)=>{
 
         <>
 
-        <div className="my-4">
+        <div className="my-3">
             
         <div className="row">
     
@@ -92,7 +92,7 @@ const Navtopage=(pge)=>{
                 srctext===''
                 ? carsAr.map(cars =>{
                 return <div key={cars.id} className="col-md-4 my-3">
-                    <Caritem carname={cars.brand} year={cars.year} price={cars.price} />
+                    <Caritem key={cars.id} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} people={cars.passenger} />
                 </div>
                  })
                 : carinfo.filter((car)=>{
@@ -101,7 +101,7 @@ const Navtopage=(pge)=>{
                     :car.brand.toLowerCase().includes(srctext.toLowerCase());                 
                 }).map(cars =>{
                     return <div key={cars.id} className="col-md-4 my-3">
-                        <Caritem carname={cars.brand} year={cars.year} price={cars.price} />
+                        <Caritem key={cars.id} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} />
                     </div>
                 })
             }
@@ -113,12 +113,13 @@ const Navtopage=(pge)=>{
         <div className="nav"> 
         <b>{page} of 10</b> 
          <div className="nav-in"> 
-        {page>1?<Link to={`/${page-1}`} onClick={handlePrev} className="arrows navigator">&larr;</Link>:<button  disabled={(page===1)} onClick={handleNext} className="arrows navigator">&larr;</button>}
-         <Link to="/"  onClick={()=>{Navtopage(1)}} className="arrows">1</Link>
-         <Link to="/2" onClick={()=>{Navtopage(2)}} className="arrows">2</Link>
-         <Link to="/3" onClick={()=>{Navtopage(3)}} className="arrows">3</Link>
-         <Link to="/4" onClick={()=>{Navtopage(4)}} className="arrows">4</Link>
-         {page<6?<Link to={`/${page+1}`} disabled={(page===6)} onClick={handleNext} className="arrows navigator">&rarr;</Link>:<button  disabled={(page===6)} onClick={handleNext} className="arrows navigator">&rarr;</button>}
+        {page>1?<Link to={`/${page-1}`} onClick={handlePrev} className="arrows navigator">&larr;</Link>:<button  disabled={true} onClick={handleNext} className="arrows navigator">&larr;</button>}
+         <Link to={`/${page}`} onClick={()=>{Navtopage(page)}} className="arrows">{page}</Link>
+         <Link to={`/${page+1<=10?page+1:page-10+1}`} onClick={()=>{Navtopage(page+1<=10?page+1:page-10+1)}} className="arrows">{page+1<=10?page+1:page-10+1}</Link>
+         <Link to={`/${page+2<=10?page+2:page-10+2}`} onClick={()=>{Navtopage(page+2<=10?page+2:page-10+2)}} className="arrows">{page+2<=10?page+2:page-10+2}</Link>
+         <Link to={`/${page+3<=10?page+3:page-10+3}`} onClick={()=>{Navtopage(page+3<=10?page+3:page-10+3)}} className="arrows">{page+3<=10?page+3:page-10+3}</Link>
+         <Link to={`/${page+4<10?page+4:page-10+4}`} onClick={()=>{Navtopage(page+4<10?page+4:page-10+4)}} className="arrows">...</Link>
+         {page<10?<Link to={`/${page+1}`} disabled={(page===10)} onClick={handleNext} className="arrows navigator">&rarr;</Link>:<button  disabled={true} onClick={handleNext} className="arrows navigator">&rarr;</button>}
          </div> 
          </div>
  

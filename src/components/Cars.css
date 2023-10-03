@@ -32,3 +32,7 @@
     color: black;
 }
 
+.arrows:disabled{
+    color: rgb(177, 174, 174);
+}
+

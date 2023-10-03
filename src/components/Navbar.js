@@ -19,6 +19,12 @@ export default function Navbar(props) {
     srctext(e.target.value);
     
   }
+
+  const srcBrand=(brnd)=>{
+    setsearch(brnd);
+    srctext(brnd);
+  }
+
   return (
     <nav className="navbar navbar-expand-lg">
   <div className="container-fluid">
@@ -37,10 +43,11 @@ export default function Navbar(props) {
             Relevance
           </a>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li><a className="dropdown-item" href="#">Sidan</a></li>
+            <li><a className="dropdown-item" href="#">SUV</a></li>
+            <li><a className="dropdown-item" href="#">Hybrid</a></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+            <li><a className="dropdown-item" href="#">See more categories...</a></li>
           </ul>
         </li>
         <li className="nav-item dropdown">
@@ -48,10 +55,15 @@ export default function Navbar(props) {
             All Brands
           </a>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li><button onClick={()=>{srcBrand("Audi")}} className="dropdown-item" >Audi</button></li>
+            <li><button onClick={()=>{srcBrand("Ford")}} className="dropdown-item" >Ford</button></li>
+            <li><button onClick={()=>{srcBrand("Lexus")}} className="dropdown-item" >Lexus</button></li>
+            <li><button onClick={()=>{srcBrand("Honda")}} className="dropdown-item" >Honda</button></li>
+            <li><button onClick={()=>{srcBrand("Chevrolet")}} className="dropdown-item" >Chevrolet</button></li>
+            <li><button onClick={()=>{srcBrand("Mercedes-Benz")}} className="dropdown-item" >Mercedes-Benz</button></li>
+            <li><button onClick={()=>{srcBrand("Toyota")}} className="dropdown-item" >Toyota</button></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+            <li><a className="dropdown-item" href="#">Browse More ...</a></li>
           </ul>
         </li>
       </ul>
