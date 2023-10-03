@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css';
 import Navbar from './components/Navbar';
 // import Carsitem from './components/Carsitem'
@@ -17,20 +17,24 @@ import {
 
 export default function App() {
   const [page,setpage]=useState(1);
+  const [search,setSearch]=useState('');
+
+  
   return (
 <div className="App">
   <div className="container">
   
-        <Router>
+    <Router>
   
-        <Navbar/>
+        <Navbar srctext={setSearch} />
+        
     <Routes>
-    <Route path="/" element={<Cars pg={setpage} />} />
-    <Route path={`/${page}`} element={<Cars pg={setpage} />} />
-    <Route path="/3" element={<Cars pg={setpage} />} />
-    <Route path="/4" element={<Cars pg={setpage} />} />
-    <Route path="/5" element={<Cars pg={setpage} />} />
-    <Route path="/6" element={<Cars pg={setpage} />} />
+    <Route path="/" element={<Cars srctext={search} pg={setpage} />} />
+    <Route path={`/2`} element={<Cars srctext={search} pg={setpage} />} />
+    <Route path="/3" element={<Cars srctext={search} pg={setpage} />} />
+    <Route path="/4" element={<Cars srctext={search} pg={setpage} />} />
+    <Route path="/5" element={<Cars srctext={search} pg={setpage} />} />
+    <Route path="/6" element={<Cars srctext={search} pg={setpage} />} />
    
     
         

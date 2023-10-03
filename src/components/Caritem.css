@@ -53,3 +53,17 @@
     border: 1rem solid white;
     
 }
+
+.mid{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mid-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-txt{
+    font-size: small;
+}

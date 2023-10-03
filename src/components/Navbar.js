@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Menu} from 'lucide-react'
 import './Navbar.css';
 import Searchbar from './Searchbar';
@@ -10,7 +10,15 @@ import {
 }from 'react-router-dom';
 
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const{srctext}=props;
+
+  const [search,setsearch]=useState('');
+  const handleSearch=(e)=>{
+    setsearch(e.target.value);
+    srctext(e.target.value);
+    
+  }
   return (
     <nav className="navbar navbar-expand-lg">
   <div className="container-fluid">
@@ -20,8 +28,8 @@ export default function Navbar() {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <input value={search} onChange={handleSearch} className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
       </form>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <li className="nav-item dropdown">

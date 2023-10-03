@@ -1,400 +1,421 @@
-
-  [
-     {
-       "brand": "Mercedes-Benz",
-       "model": "Citan",
-       "car body": "van",
-       "color": "red",
-       "price": "100$",
-       "year": 2010,
-       "average" : "8.2km/1-litre",
-       "type" : "Hybrid",
-       "gear" : "automatic"
-     },
-     {
-       "brand": "Lexus",
-       "model": "GX",
-       "car body": "4WD",
-       "color": "black",
-       "price": "500$",
-       "year": 2020,
-       "average" : "8.2km/1-litre",
-       "type" : "Hybrid",
-       "gear" : "automatic"
-     },
-     {
-       "brand": "Toyota",
-       "model": "RAV4",
-       "car body": "crossover",
-       "color": "gray",
-       "price": "150$",
-       "year": 2015,
-       "average" : "8.2km/1-litre",
-       "type" : "Hybrid",
-       "gear" : "Manual"
-     },
-     {
-       "brand": "Hyundai",
-       "model": "Grand i10 Nios",
-       "car body": "hatchback",
-       "color": "yellow",
-       "price": "300$",
-       "year": 2018,
-       "average" : "8.2km/1-litre",
-       "type" : "Sedan",
-       "gear" : "automatic"
-     },
-     {
-       "brand": "Honda",
-       "model": "Civic",
-       "car body": "sedan",
-       "color": "blue",
-       "price": "250$",
-       "year": 2010,
-       "average" : "8.2km/1-litre",
-       "type" : "Hybrid",
-       "gear" : "Manual"
-     },
-     {
-      "brand": "Mercedes-Benz2",
-      "model": "Citan",
-      "car body": "van",
-      "color": "red",
-      "price": "100$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "NEXTT",
-      "model": "GX",
-      "car body": "4WD",
-      "color": "black",
-      "price": "500$",
-      "year": 2020,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Toyota",
-      "model": "RAV4",
-      "car body": "crossover",
-      "color": "gray",
-      "price": "150$",
-      "year": 2015,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Hyundai",
-      "model": "Grand i10 Nios",
-      "car body": "hatchback",
-      "color": "yellow",
-      "price": "300$",
-      "year": 2018,
-      "average" : "8.2km/1-litre",
-      "type" : "Sedan",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Honda",
-      "model": "Civic",
-      "car body": "sedan",
-      "color": "blue",
-      "price": "250$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Mercedes-Benz",
-      "model": "Citan",
-      "car body": "van",
-      "color": "red",
-      "price": "100$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Lexus",
-      "model": "GX",
-      "car body": "4WD",
-      "color": "black",
-      "price": "500$",
-      "year": 2020,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Toyota",
-      "model": "RAV4",
-      "car body": "crossover",
-      "color": "gray",
-      "price": "150$",
-      "year": 2015,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Hyundai",
-      "model": "Grand i10 Nios",
-      "car body": "hatchback",
-      "color": "yellow",
-      "price": "300$",
-      "year": 2018,
-      "average" : "8.2km/1-litre",
-      "type" : "Sedan",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Honda",
-      "model": "Civic",
-      "car body": "sedan",
-      "color": "blue",
-      "price": "250$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Mercedes-Benz",
-      "model": "Citan",
-      "car body": "van",
-      "color": "red",
-      "price": "100$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Lexus",
-      "model": "GX",
-      "car body": "4WD",
-      "color": "black",
-      "price": "500$",
-      "year": 2020,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Toyota",
-      "model": "RAV4",
-      "car body": "crossover",
-      "color": "gray",
-      "price": "150$",
-      "year": 2015,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Hyundai",
-      "model": "Grand i10 Nios",
-      "car body": "hatchback",
-      "color": "yellow",
-      "price": "300$",
-      "year": 2018,
-      "average" : "8.2km/1-litre",
-      "type" : "Sedan",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Honda",
-      "model": "Civic",
-      "car body": "sedan",
-      "color": "blue",
-      "price": "250$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Mercedes-Benz",
-      "model": "Citan",
-      "car body": "van",
-      "color": "red",
-      "price": "100$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Lexus",
-      "model": "GX",
-      "car body": "4WD",
-      "color": "black",
-      "price": "500$",
-      "year": 2020,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Toyota",
-      "model": "RAV4",
-      "car body": "crossover",
-      "color": "gray",
-      "price": "150$",
-      "year": 2015,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Hyundai",
-      "model": "Grand i10 Nios",
-      "car body": "hatchback",
-      "color": "yellow",
-      "price": "300$",
-      "year": 2018,
-      "average" : "8.2km/1-litre",
-      "type" : "Sedan",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Honda",
-      "model": "Civic",
-      "car body": "sedan",
-      "color": "blue",
-      "price": "250$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Mercedes-Benz",
-      "model": "Citan",
-      "car body": "van",
-      "color": "red",
-      "price": "100$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Lexus",
-      "model": "GX",
-      "car body": "4WD",
-      "color": "black",
-      "price": "500$",
-      "year": 2020,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Toyota",
-      "model": "RAV4",
-      "car body": "crossover",
-      "color": "gray",
-      "price": "150$",
-      "year": 2015,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Hyundai",
-      "model": "Grand i10 Nios",
-      "car body": "hatchback",
-      "color": "yellow",
-      "price": "300$",
-      "year": 2018,
-      "average" : "8.2km/1-litre",
-      "type" : "Sedan",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Honda",
-      "model": "Civic",
-      "car body": "sedan",
-      "color": "blue",
-      "price": "250$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Mercedes-Benz",
-      "model": "Citan",
-      "car body": "van",
-      "color": "red",
-      "price": "100$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Lexus",
-      "model": "GX",
-      "car body": "4WD",
-      "color": "black",
-      "price": "500$",
-      "year": 2020,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Toyota",
-      "model": "RAV4",
-      "car body": "crossover",
-      "color": "gray",
-      "price": "150$",
-      "year": 2015,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Hyundai",
-      "model": "Grand i10 Nios",
-      "car body": "hatchback",
-      "color": "yellow",
-      "price": "300$",
-      "year": 2018,
-      "average" : "8.2km/1-litre",
-      "type" : "Sedan",
-      "gear" : "automatic"
-    },
-    {
-      "brand": "Honda",
-      "model": "Civic",
-      "car body": "sedan",
-      "color": "blue",
-      "price": "250$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    },
-    {
-      "brand": "Honda",
-      "model": "Civic",
-      "car body": "sedan",
-      "color": "blue",
-      "price": "250$",
-      "year": 2010,
-      "average" : "8.2km/1-litre",
-      "type" : "Hybrid",
-      "gear" : "Manual"
-    }
-   ]
- 
+[{
+  "id": 1,
+  "brand": "Lamborghini",
+  "year": 2015,
+  "price": 115,
+  "type": "Aventador",
+  "gear": "automatic"
+}, {
+  "id": 2,
+  "brand": "Infiniti",
+  "year": 2021,
+  "price": 996,
+  "type": "G37",
+  "gear": "manual"
+}, {
+  "id": 3,
+  "brand": "Chevrolet",
+  "year": 2023,
+  "price": 871,
+  "type": "Colorado",
+  "gear": "manual"
+}, {
+  "id": 4,
+  "brand": "Lexus",
+  "year": 2017,
+  "price": 908,
+  "type": "GS",
+  "gear": "automatic"
+}, {
+  "id": 5,
+  "brand": "Buick",
+  "year": 2022,
+  "price": 396,
+  "type": "LeSabre",
+  "gear": "manual"
+}, {
+  "id": 6,
+  "brand": "Mazda",
+  "year": 2018,
+  "price": 753,
+  "type": "Miata MX-5",
+  "gear": "automatic"
+}, {
+  "id": 7,
+  "brand": "Daewoo",
+  "year": 2022,
+  "price": 747,
+  "type": "Lanos",
+  "gear": "automatic"
+}, {
+  "id": 8,
+  "brand": "Pontiac",
+  "year": 2014,
+  "price": 115,
+  "type": "Grand Prix",
+  "gear": "manual"
+}, {
+  "id": 9,
+  "brand": "Mazda",
+  "year": 2023,
+  "price": 729,
+  "type": "Protege",
+  "gear": "manual"
+}, {
+  "id": 10,
+  "brand": "Kia",
+  "year": 2019,
+  "price": 257,
+  "type": "Borrego",
+  "gear": "automatic"
+}, {
+  "id": 11,
+  "brand": "Isuzu",
+  "year": 2016,
+  "price": 536,
+  "type": "Stylus",
+  "gear": "automatic"
+}, {
+  "id": 12,
+  "brand": "Bugatti",
+  "year": 2017,
+  "price": 950,
+  "type": "Veyron",
+  "gear": "automatic"
+}, {
+  "id": 13,
+  "brand": "Chevrolet",
+  "year": 2022,
+  "price": 983,
+  "type": "Corvette",
+  "gear": "automatic"
+}, {
+  "id": 14,
+  "brand": "Pontiac",
+  "year": 2020,
+  "price": 1000,
+  "type": "G5",
+  "gear": "automatic"
+}, {
+  "id": 15,
+  "brand": "Cadillac",
+  "year": 2022,
+  "price": 402,
+  "type": "CTS",
+  "gear": "manual"
+}, {
+  "id": 16,
+  "brand": "Dodge",
+  "year": 2019,
+  "price": 976,
+  "type": "Ram Van 3500",
+  "gear": "automatic"
+}, {
+  "id": 17,
+  "brand": "Ford",
+  "year": 2021,
+  "price": 567,
+  "type": "Falcon",
+  "gear": "automatic"
+}, {
+  "id": 18,
+  "brand": "Volvo",
+  "year": 2016,
+  "price": 802,
+  "type": "XC70",
+  "gear": "automatic"
+}, {
+  "id": 19,
+  "brand": "Mitsubishi",
+  "year": 2014,
+  "price": 678,
+  "type": "Eclipse",
+  "gear": "automatic"
+}, {
+  "id": 20,
+  "brand": "Audi",
+  "year": 2018,
+  "price": 884,
+  "type": "A4",
+  "gear": "automatic"
+}, {
+  "id": 21,
+  "brand": "GMC",
+  "year": 2014,
+  "price": 795,
+  "type": "Yukon XL 1500",
+  "gear": "manual"
+}, {
+  "id": 22,
+  "brand": "Lexus",
+  "year": 2017,
+  "price": 736,
+  "type": "LS",
+  "gear": "automatic"
+}, {
+  "id": 23,
+  "brand": "Ford",
+  "year": 2016,
+  "price": 939,
+  "type": "E250",
+  "gear": "manual"
+}, {
+  "id": 24,
+  "brand": "Lincoln",
+  "year": 2018,
+  "price": 133,
+  "type": "Continental",
+  "gear": "manual"
+}, {
+  "id": 25,
+  "brand": "Land Rover",
+  "year": 2020,
+  "price": 851,
+  "type": "Freelander",
+  "gear": "automatic"
+}, {
+  "id": 26,
+  "brand": "GMC",
+  "year": 2015,
+  "price": 753,
+  "type": "Jimmy",
+  "gear": "automatic"
+}, {
+  "id": 27,
+  "brand": "Saturn",
+  "year": 2022,
+  "price": 558,
+  "type": "S-Series",
+  "gear": "manual"
+}, {
+  "id": 28,
+  "brand": "Toyota",
+  "year": 2015,
+  "price": 685,
+  "type": "Tercel",
+  "gear": "manual"
+}, {
+  "id": 29,
+  "brand": "Honda",
+  "year": 2018,
+  "price": 415,
+  "type": "Odyssey",
+  "gear": "manual"
+}, {
+  "id": 30,
+  "brand": "Mazda",
+  "year": 2015,
+  "price": 667,
+  "type": "626",
+  "gear": "manual"
+}, {
+  "id": 31,
+  "brand": "Volkswagen",
+  "year": 2022,
+  "price": 219,
+  "type": "Jetta",
+  "gear": "automatic"
+}, {
+  "id": 32,
+  "brand": "Porsche",
+  "year": 2015,
+  "price": 203,
+  "type": "911",
+  "gear": "manual"
+}, {
+  "id": 33,
+  "brand": "Volvo",
+  "year": 2019,
+  "price": 414,
+  "type": "V40",
+  "gear": "automatic"
+}, {
+  "id": 34,
+  "brand": "Mazda",
+  "year": 2015,
+  "price": 384,
+  "type": "B-Series",
+  "gear": "manual"
+}, {
+  "id": 35,
+  "brand": "Mazda",
+  "year": 2022,
+  "price": 421,
+  "type": "Mazda3",
+  "gear": "automatic"
+}, {
+  "id": 36,
+  "brand": "Chevrolet",
+  "year": 2020,
+  "price": 660,
+  "type": "Suburban 1500",
+  "gear": "automatic"
+}, {
+  "id": 37,
+  "brand": "Chevrolet",
+  "year": 2015,
+  "price": 198,
+  "type": "Astro",
+  "gear": "manual"
+}, {
+  "id": 38,
+  "brand": "Chevrolet",
+  "year": 2015,
+  "price": 402,
+  "type": "Tahoe",
+  "gear": "automatic"
+}, {
+  "id": 39,
+  "brand": "Honda",
+  "year": 2015,
+  "price": 183,
+  "type": "Accord",
+  "gear": "manual"
+}, {
+  "id": 40,
+  "brand": "Ford",
+  "year": 2022,
+  "price": 259,
+  "type": "Laser",
+  "gear": "automatic"
+}, {
+  "id": 41,
+  "brand": "Chevrolet",
+  "year": 2021,
+  "price": 617,
+  "type": "Corvette",
+  "gear": "manual"
+}, {
+  "id": 42,
+  "brand": "Mercedes-Benz",
+  "year": 2018,
+  "price": 670,
+  "type": "S-Class",
+  "gear": "automatic"
+}, {
+  "id": 43,
+  "brand": "Nissan",
+  "year": 2021,
+  "price": 909,
+  "type": "GT-R",
+  "gear": "manual"
+}, {
+  "id": 44,
+  "brand": "Lincoln",
+  "year": 2014,
+  "price": 566,
+  "type": "MKX",
+  "gear": "automatic"
+}, {
+  "id": 45,
+  "brand": "Chevrolet",
+  "year": 2018,
+  "price": 389,
+  "type": "Caprice Classic",
+  "gear": "automatic"
+}, {
+  "id": 46,
+  "brand": "Cadillac",
+  "year": 2016,
+  "price": 872,
+  "type": "Escalade",
+  "gear": "automatic"
+}, {
+  "id": 47,
+  "brand": "Honda",
+  "year": 2021,
+  "price": 670,
+  "type": "Accord",
+  "gear": "manual"
+}, {
+  "id": 48,
+  "brand": "BMW",
+  "year": 2020,
+  "price": 658,
+  "type": "M",
+  "gear": "automatic"
+}, {
+  "id": 49,
+  "brand": "Lamborghini",
+  "year": 2018,
+  "price": 523,
+  "type": "Diablo",
+  "gear": "manual"
+}, {
+  "id": 50,
+  "brand": "Toyota",
+  "year": 2020,
+  "price": 289,
+  "type": "Camry",
+  "gear": "automatic"
+}, {
+  "id": 51,
+  "brand": "Eagle",
+  "year": 2020,
+  "price": 889,
+  "type": "Vision",
+  "gear": "automatic"
+}, {
+  "id": 52,
+  "brand": "Volkswagen",
+  "year": 2019,
+  "price": 534,
+  "type": "Routan",
+  "gear": "manual"
+}, {
+  "id": 53,
+  "brand": "GMC",
+  "year": 2016,
+  "price": 811,
+  "type": "Savana Cargo Van",
+  "gear": "automatic"
+}, {
+  "id": 54,
+  "brand": "GMC",
+  "year": 2022,
+  "price": 563,
+  "type": "3500 Club Coupe",
+  "gear": "manual"
+}, {
+  "id": 55,
+  "brand": "Chevrolet",
+  "year": 2022,
+  "price": 599,
+  "type": "Lumina APV",
+  "gear": "automatic"
+}, {
+  "id": 56,
+  "brand": "Volkswagen",
+  "year": 2020,
+  "price": 577,
+  "type": "CC",
+  "gear": "automatic"
+}, {
+  "id": 57,
+  "brand": "Mitsubishi",
+  "year": 2018,
+  "price": 540,
+  "type": "Raider",
+  "gear": "manual"
+}, {
+  "id": 58,
+  "brand": "Mitsubishi",
+  "year": 2021,
+  "price": 922,
+  "type": "Galant",
+  "gear": "automatic"
+}, {
+  "id": 59,
+  "brand": "Chrysler",
+  "year": 2015,
+  "price": 271,
+  "type": "300",
+  "gear": "manual"
+}, {
+  "id": 60,
+  "brand": "Volvo",
+  "year": 2022,
+  "price": 261,
+  "type": "V70",
+  "gear": "manual"
+}]
