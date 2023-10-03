@@ -16,18 +16,18 @@ import {
 
 export default function Cars(props) {
     const {pg,srctext}=props;
-    useEffect(()=>{
-        console.log(srctext);
-      },[srctext])
+    // useEffect(()=>{
+    //     console.log(srctext);
+    //   },[srctext])
     const [page, setpage] = useState(1);
     const [pointer,setptr] = useState(0);
     const [loading, setloading] = useState(false);
     const[carsAr,setCarsAr] = useState(carinfo.slice(pointer,pointer+6));
 
-    // useEffect(()=>{
-    //     setCarsAr(carinfo.slice(pointer,pointer+6));
+    useEffect(()=>{
+        setCarsAr(carinfo.slice(pointer,pointer+6));
         
-    // } ,[pointer] );
+    } ,[pointer] );
 
     const handleNext=()=>{
         if(pointer>=30){
@@ -68,10 +68,9 @@ export default function Cars(props) {
 
 const Navtopage=(pge)=>{
     setpage(pge);
-    // pg(pge);
-    // console.log(page);
+ 
     setptr((pge-1)*6);
-    // console.log(pointer);
+
     setloading(true);
 }
 
