@@ -6,9 +6,9 @@ import './Caritem.css'
 
 export default function Caritem(props) {
     let { carname, year, price, gear,typee,people,img} = props;
-    useEffect(()=>{
-        console.log(typee);
-    })
+    // useEffect(()=>{
+    //     console.log(typee);
+    // })
     const [like, setlike] = useState(false);
     const toggleLike = () => {
         if (like === true) {
