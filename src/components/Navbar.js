@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import {Menu} from 'lucide-react'
 import './Navbar.css';
-import Searchbar from './Searchbar';
-import Results from './Results';
-import { Search } from 'lucide-react';
+
 
 import {
   Link
@@ -39,19 +37,19 @@ export default function Navbar(props) {
       </form>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a className="nav-link dropdown-toggle" href="/relevance" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Relevance
           </a>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Sidan</a></li>
-            <li><a className="dropdown-item" href="#">SUV</a></li>
-            <li><a className="dropdown-item" href="#">Hybrid</a></li>
+            <li><a className="dropdown-item" href="/sidan">Sidan</a></li>
+            <li><a className="dropdown-item" href="/SUV">SUV</a></li>
+            <li><a className="dropdown-item" href="/Hybrid">Hybrid</a></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">See more categories...</a></li>
+            <li><a className="dropdown-item" href="/categories">See more categories...</a></li>
           </ul>
         </li>
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a className="nav-link dropdown-toggle" href="/brands" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             All Brands
           </a>
           <ul className="dropdown-menu">
@@ -63,7 +61,7 @@ export default function Navbar(props) {
             <li><button onClick={()=>{srcBrand("Mercedes-Benz")}} className="dropdown-item" >Mercedes-Benz</button></li>
             <li><button onClick={()=>{srcBrand("Toyota")}} className="dropdown-item" >Toyota</button></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Browse More ...</a></li>
+            <li><a className="dropdown-item" href="/more-brands">Browse More ...</a></li>
           </ul>
         </li>
       </ul>

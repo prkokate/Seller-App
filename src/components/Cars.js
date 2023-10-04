@@ -1,9 +1,7 @@
-//require("dotenv").config();
+
 import React, { useState,useEffect } from 'react'
 import './Cars.css'
 import Caritem from './Caritem';
-import Spinner from './Spinner';
-import InfiniteScroll from "react-infinite-scroll-component";
 import './Caritem.css'
 import carinfo from '../carinfo.json'
 import {
@@ -57,7 +55,7 @@ export default function Cars(props) {
 
             setpage(page-1);
             setptr(pointer-6);
-            // pg(page-1);
+        
         }
         setloading(true);
         //setCarsAr(carinfo.slice(pointer,pointer+6));
@@ -92,7 +90,7 @@ const Navtopage=(pge)=>{
                 srctext===''
                 ? carsAr.map(cars =>{
                 return <div key={cars.id} className="col-md-4 my-3">
-                    <Caritem key={cars.id} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} people={cars.passenger} />
+                    <Caritem key={cars.id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} people={cars.passenger} />
                 </div>
                  })
                 : carinfo.filter((car)=>{
@@ -101,7 +99,7 @@ const Navtopage=(pge)=>{
                     :car.brand.toLowerCase().includes(srctext.toLowerCase());                 
                 }).map(cars =>{
                     return <div key={cars.id} className="col-md-4 my-3">
-                        <Caritem key={cars.id} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} />
+                        <Caritem key={cars.id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} />
                     </div>
                 })
             }

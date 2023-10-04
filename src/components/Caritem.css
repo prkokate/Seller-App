@@ -52,11 +52,14 @@
 .card{
     border-radius: 0.7rem;
     padding: 0;
+    background-color: #eff3eb;
 }
 .card-img-top{
     border-radius: 0.7rem ;
-    border: 1rem solid white;
-    
+    margin-top: 5%;
+    width: 91%;
+    height: 14rem;
+    object-fit: cover;
 }
 
 .card-body{

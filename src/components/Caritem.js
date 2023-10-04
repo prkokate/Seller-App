@@ -5,7 +5,7 @@ import './Caritem.css'
 
 
 export default function Caritem(props) {
-    let { carname, year, price, gear,typee,people} = props;
+    let { carname, year, price, gear,typee,people,img} = props;
     useEffect(()=>{
         console.log(typee);
     })
@@ -19,9 +19,11 @@ export default function Caritem(props) {
             setlike(true);
         }
     }
+
+    let imgdef="https://stimg.cardekho.com/images/carexteriorimages/930x620/Tata/Harrier/9850/1681887437871/front-left-side-47.jpg?tr=w-420";
     return (
         <div className="card" style={{ width: "22rem" }}>
-            <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Tata/Harrier/9850/1681887437871/front-left-side-47.jpg?tr=w-420" className="card-img-top" alt="..." />
+            <img src={img?img:imgdef} className="card-img-top" alt="..." />
             <div className="card-body">
                 <span className='title' ><h5 className="card-title">{carname}</h5> <div className="year">{year}</div> </span>
                 <div className="mid">
