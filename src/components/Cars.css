@@ -17,13 +17,23 @@
     width: 40%;
 }
 
+@media  screen and (max-width:600px) {
+    .nav-in{
+        width: 270px;
+    }
+    .nav-in .arrows{
+        width: 2.2rem;
+    }
+    
+}
+
 .arrows{
     cursor: pointer;
     display: flex;
     justify-content: center;
     /* border: 2px solid black; */
     width: 3rem;
-    padding: 0.5rem;
+    padding: 0.3rem;
     background-color: white;
     border-radius: 1rem;
     padding: 10px;
