@@ -2,6 +2,10 @@ const mongoose=require("mongoose")
 const {Schema}=mongoose;
 
 let CarSchema=new Schema({
+    id:{
+        type:Number,
+        required:true
+    },
     brand:{
         type:String,
         required:[true,"Brand is required"]

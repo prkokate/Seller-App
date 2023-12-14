@@ -56,14 +56,17 @@ router.post("/rent-car/:id",fetchuser,async(req,res)=>{
     
    try{
         if(thecar.available===true){
-        thecar=await Cars.findByIdAndUpdate(req.params.id,{$set:{available:false,curUser:req.user.id}},{upsert:false,multi:false})
-        thecar.available=false;
-        
+
         var curdate=new Date();
         var end=new Date();
         end.setDate(curdate.getDate()+req.body.days)
 
-        curuser=await User.findByIdAndUpdate(req.user.id,{$set:{"myPurchase":[...curuser.myPurchase,req.params.id],startDate:curdate,endDate:end}})
+        thecar=await Cars.findByIdAndUpdate(req.params.id,{$set:{available:false,curUser:req.user.id,startDate:curdate,endDate:end}},{upsert:false,multi:false})
+        thecar.available=false;
+
+     
+
+        curuser=await User.findByIdAndUpdate(req.user.id,{$set:{"myPurchase":[...curuser.myPurchase,req.params.id]}})
         if(curuser.myFav.includes(req.params.id)){
             //Logic to remove the req.params.id from myFav list...
             await User.findByIdAndUpdate(req.user.id,{"myFav":curuser.myFav.remove(req.params.id)})
@@ -83,13 +86,14 @@ router.post("/rent-car/:id",fetchuser,async(req,res)=>{
 
 //list-car
 router.post("/list-car",fetchuser,async(req,res)=>{
-    const {brand,year,price,passenger,type,gear,image}=req.body;
+    const {id,brand,year,price,passenger,type,gear,image}=req.body;
    try{
 
     let curuser=await User.findById(req.user.id);
 
    
     const listCar=await Caritem.create({
+        id:id,
         brand:brand,
         year:year,
         price:price,
@@ -98,6 +102,7 @@ router.post("/list-car",fetchuser,async(req,res)=>{
         gear:gear,
         image:image,
         owner:req.user.id,
+        curUser:null,
         available:true
     })
 
@@ -112,6 +117,26 @@ router.post("/list-car",fetchuser,async(req,res)=>{
     return res.status(400).json({error:"Internal server error!"});
 }
 })
+
+router.put("/make-available",async(req,res)=>{
+    try{
+        let rented=await Caritem.find({available:false})
+        let curdate=new Date()
+        for(i=0;i<rented.length;i++){
+            if(rented[i].endDate===curdate){
+                await Caritem.findByIdAndUpdate(rented[i]._id,{$set:{available:true,startDate:null,endDate:null,curUser:null}})
+                await User.findOneAndUpdate({myPurchase:rented[i]._id},{$set:{myPurchase:this.myPurchase.remove(rented[i]._id)}})
+            }
+        }
+
+        res.json({success:"make available succesfull!"})
+    }
+    catch(err){
+        console.log(err);
+        res.status(400).send("Internal server error!")
+    }
+})
+
 
 
 
