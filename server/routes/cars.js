@@ -15,6 +15,7 @@ let success=false;
 router.get("/all-cars",async(req,res)=>{
     try{
         const carArr=await Cars.find();
+        //console.log(carArr)
         res.json(carArr)
     }
     catch(err){
