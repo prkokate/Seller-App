@@ -14,9 +14,9 @@ import {
 
 
 export default function Cars(props) {
-    const {pg,srctext}=props;
+    const {pg,srctext,favorite}=props;
     //loadings imported for implementation of spinner
-    const {fetchAllCars,cars,loadings,favList,getFav}=useContext(UserContext);
+    const {fetchAllCars,cars,loadings,favList,setfavList,getFav}=useContext(UserContext);
     const [page, setpage] = useState(1);
     const [pointer,setptr] = useState(0);
     const [loading, setloading] = useState(false);
@@ -30,9 +30,16 @@ export default function Cars(props) {
         fetchAllCars().then(array=>{
             //console.log(array)
             setCarsAr(array.slice(pointer,pointer+6))
+            settotalpgs(Math.floor(array.length/6)+array.length%6)
+        })
+
+        getFav().then(array=>{
+            //console.log(array)
+            setfavList(array)
         })
         
-        settotalpgs(Math.floor(cars.length/6)+cars.length%6)
+        // console.log("favorite=",favorite)
+        
       
 
     },[])
@@ -43,17 +50,9 @@ export default function Cars(props) {
         
     } ,[pointer]);
 
-    // useEffect(()=>{
-    //     try{
+  
 
-    //         getFav();
-    //     }
-    //     catch(err){
-    //         console.log("error in getting fav list");
-    //     }
-    // },[getFav])
-
-    function isLiked(id){
+    function isLiked(id){     
         
         if(favList.includes(id)){
             return true
@@ -95,8 +94,7 @@ export default function Cars(props) {
         
         }
         setloading(true);
-        //setCarsAr(carinfo.slice(pointer,pointer+6));
-       //setloading(false);
+       
 
 
 }
@@ -125,21 +123,29 @@ const Navtopage=(pge)=>{
         <div className="row">
     
             {
-                srctext===''
-                ? carsAr.map(cars =>{
+
+            srctext!==''? cars.filter((car)=>{
+            return srctext.toLowerCase()===''
+            ? car
+            :car.brand.toLowerCase().includes(srctext.toLowerCase());                 
+            }).map(cars =>{
+                return <div key={cars.id} className="col-md-4 my-3">
+                    <Caritem key={cars.id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} liked={isLiked(cars._id)} />
+                </div>
+            })
+            : favorite===true? cars.filter((car)=>{
+                    return favList.includes(car._id);
+                }).map((carfav)=>{
+                    return <div key={carfav.id} className="col-md-4 my-3">
+                    <Caritem key={carfav.id} myid={carfav._id} img={carfav.image} carname={carfav.brand} year={carfav.year} price={carfav.price} gear={carfav.gear} typee={carfav.type} people={carfav.passenger} liked={isLiked(carfav._id)} />
+                </div>
+                }) 
+                :carsAr.map((cars) =>{
                 return <div key={cars.id} className="col-md-4 my-3">
                     <Caritem key={cars.id} myid={cars._id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} people={cars.passenger} liked={isLiked(cars._id)} />
                 </div>
                  })
-                : cars.filter((car)=>{
-                    return srctext.toLowerCase()===''
-                    ? car
-                    :car.brand.toLowerCase().includes(srctext.toLowerCase());                 
-                }).map(cars =>{
-                    return <div key={cars.id} className="col-md-4 my-3">
-                        <Caritem key={cars.id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} />
-                    </div>
-                })
+               
             }
            
         </div>

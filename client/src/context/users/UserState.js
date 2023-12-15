@@ -25,7 +25,7 @@ const UserState=(props)=>{
             })
 
             const json=await response.json();
-            console.log(json)
+           // console.log(json)
             
             setcars(json);
             return json
@@ -41,7 +41,7 @@ const UserState=(props)=>{
 
 
 
-    const getFav=async()=>{
+    async function getFav(){
         try{
             const response=await fetch(`${host}/api/cars/getFavList`,{
                 method:"GET",
@@ -54,6 +54,7 @@ const UserState=(props)=>{
             })
             const json=await response.json()
             setfavList(json);
+            return json;
         }
         catch(err){
             console.error(err);

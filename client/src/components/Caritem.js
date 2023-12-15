@@ -10,11 +10,7 @@ export default function Caritem(props) {
     const {addFav,favList,setfavList,removeFav}=useContext(UserContext)
    
     const [like, setlike] = useState(liked);
-    // useEffect(()=>{
-    //     if(isLiked(props.myid)){
-    //         setlike(true)
-    //     }
-    // },[])
+  
     const toggleLike = () => {
         
         if(like){
@@ -28,7 +24,7 @@ export default function Caritem(props) {
         else{
 
             addFav(props.myid)
-            setfavList([...favList,props.myid])
+            //setfavList([...favList,props.myid])
         }
             setlike(!like);
             //console.log(fav)
