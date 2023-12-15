@@ -64,7 +64,9 @@ export default function Navbar(props) {
             <li><a className="dropdown-item" href="/more-brands">Browse More ...</a></li>
           </ul>
         </li>
-
+        <Link to="/"  className='nav-item btn home' >
+              Home
+        </Link>
         <Link to="/My-Favorites"  className='nav-item btn btn-primary myfav' >
               My Favorites
         </Link>
