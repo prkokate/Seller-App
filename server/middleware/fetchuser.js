@@ -5,14 +5,15 @@ const jwt =require('jsonwebtoken')
 
 const fetchuser=(req,res,next)=>{
     const token=req.header("auth-token")
+    //console.log("token=",token)
     if(!token){
-        res.status(401).send("Authentication failed!")
+        res.status(400).send("Authentication failed! token is null")
     }
 
     try{
         const decoded= jwt.verify(token,JWT_SECRET);
         req.user=decoded.user;
-        console.log(decoded)
+       // console.log(decoded)
         next()
 
     }

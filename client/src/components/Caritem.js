@@ -1,24 +1,42 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Caritem.css'
+import UserContext from '../context/users/UserContext';
 
 
 
 
 export default function Caritem(props) {
-    let { carname, year, price, gear,typee,people,img} = props;
+    let { carname, year, price, gear,typee,people,img,liked} = props;
+    const {addFav,favList,setfavList,removeFav}=useContext(UserContext)
+   
+    const [like, setlike] = useState(liked);
     // useEffect(()=>{
-    //     console.log(typee);
-    // })
-    const [like, setlike] = useState(false);
+    //     if(isLiked(props.myid)){
+    //         setlike(true)
+    //     }
+    // },[])
     const toggleLike = () => {
-        if (like === true) {
-            setlike(false);
+        
+        if(like){
+            removeFav(props.myid)
+            const ind=favList.indexOf(props.myid);
 
+            if(ind>-1){
+                favList.splice(ind,1);
+            }
         }
-        else {
-            setlike(true);
+        else{
+
+            addFav(props.myid)
+            setfavList([...favList,props.myid])
         }
+            setlike(!like);
+            //console.log(fav)
+        
+        // console.log(props.myid)
     }
+
+    
 
     let imgdef="https://stimg.cardekho.com/images/carexteriorimages/930x620/Tata/Harrier/9850/1681887437871/front-left-side-47.jpg?tr=w-420";
     return (

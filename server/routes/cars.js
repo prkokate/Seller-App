@@ -39,15 +39,60 @@ router.get("/my-favorites",fetchuser,async(req,res)=>{
 }
 })
 
+
+router.get("/getFavList",fetchuser,async(req,res)=>{
+    try{
+        let curuser=await User.findById(req.user.id);
+        const arr=curuser.myFav?curuser.myFav:[];
+        res.json(arr);
+    }
+    catch(err){
+        return  res.status(400).send("Bad Request!");
+    }
+})
+
 router.put("/add-favorite/:id",fetchuser,async(req,res)=>{
-    let curuser=await User.findById(req.user.id)
-    //console.log(curuser);
+    try{
+        let curuser=await User.findById(req.user.id)
+    //console.log(req.params.id);
     if(!curuser.myFav || !curuser.myFav.includes(req.params.id)){
-        curuser=await User.findByIdAndUpdate(req.user.id,{"myFav":[...curuser.myFav,req.params.id]})
-        res.json(curuser.myFav);
+        await User.findByIdAndUpdate(req.user.id,{"myFav":[...curuser.myFav,req.params.id]})
+        success=true;
+        res.json(success);
     }
     else{
-        res.json({error:"Already in favorites"});
+        success=false;
+        res.json(success)
+    }}
+    catch(err){
+        console.log("ERROR-Ahe-re:",err);
+        success=false
+        res.status(400).json(success)
+    }
+})
+
+
+router.put("/remove-favorite/:id",fetchuser,async(req,res)=>{
+    try{
+        let curuser=await User.findById(req.user.id)
+    //console.log(req.params.id);
+    if(curuser.myFav && curuser.myFav.includes(req.params.id)){
+        const ind=curuser.myFav.indexOf(req.params.id);
+        if(ind>-1){
+            curuser.myFav.splice(ind,1);
+        }
+        await User.findByIdAndUpdate(req.user.id,{$set:{"myFav":curuser.myFav}})
+        success=true;
+        res.json(success);
+    }
+    else{
+        success=false;
+        res.json(success)
+    }}
+    catch(err){
+        console.log("ERROR-Ahe-re:",err);
+        success=false
+        res.status(400).json(success)
     }
 })
 

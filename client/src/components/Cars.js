@@ -1,5 +1,5 @@
 
-import React, { useState,useEffect, useContext } from 'react'
+import React, { useState,useEffect, useContext,useCallback } from 'react'
 import './Cars.css'
 import Caritem from './Caritem';
 import './Caritem.css'
@@ -16,26 +16,50 @@ import {
 export default function Cars(props) {
     const {pg,srctext}=props;
     //loadings imported for implementation of spinner
-    const {fetchAllCars,cars,loadings}=useContext(UserContext);
+    const {fetchAllCars,cars,loadings,favList,getFav}=useContext(UserContext);
     const [page, setpage] = useState(1);
     const [pointer,setptr] = useState(0);
     const [loading, setloading] = useState(false);
     const[carsAr,setCarsAr] = useState(cars.slice(pointer,pointer+6));
     const [totalpgs,settotalpgs]=useState(1)
 
+
     
     useEffect(()=>{
-        fetchAllCars();
- 
-       settotalpgs(Math.floor(cars.length/6)+cars.length%6)
-        setCarsAr(cars.slice(pointer,pointer+6));
+   
+        fetchAllCars().then(array=>{
+            //console.log(array)
+            setCarsAr(array.slice(pointer,pointer+6))
+        })
+        
+        settotalpgs(Math.floor(cars.length/6)+cars.length%6)
+      
 
-    },[fetchAllCars])
+    },[])
+
     useEffect(()=>{
 
         setCarsAr(cars.slice(pointer,pointer+6));
         
     } ,[pointer]);
+
+    // useEffect(()=>{
+    //     try{
+
+    //         getFav();
+    //     }
+    //     catch(err){
+    //         console.log("error in getting fav list");
+    //     }
+    // },[getFav])
+
+    function isLiked(id){
+        
+        if(favList.includes(id)){
+            return true
+        }
+        return false
+    }
 
     const handleNext=()=>{
         if(pointer>=cars.length){
@@ -104,7 +128,7 @@ const Navtopage=(pge)=>{
                 srctext===''
                 ? carsAr.map(cars =>{
                 return <div key={cars.id} className="col-md-4 my-3">
-                    <Caritem key={cars.id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} people={cars.passenger} />
+                    <Caritem key={cars.id} myid={cars._id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} people={cars.passenger} liked={isLiked(cars._id)} />
                 </div>
                  })
                 : cars.filter((car)=>{
