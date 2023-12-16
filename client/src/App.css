@@ -5,3 +5,35 @@
 .App div{
   place-items: center;
 }
+
+.listcar{
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 120%;
+ letter-spacing: 1px;
+  border-radius: 5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  text-align: center;
+  cursor: pointer;
+  border: double 4px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(rgb(8, 8, 8), rgb(2, 2, 37)), radial-gradient(circle at top left, #f00,#3020ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+
+.outer{
+  display: flex;
+  /* border: 2px solid black; */
+ justify-content: center;
+ position: fixed;
+ bottom: 4% ;
+ width: 100%;
+ z-index: 100;
+ left: 0;
+ 
+}

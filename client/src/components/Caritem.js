@@ -10,6 +10,8 @@ export default function Caritem(props) {
     let { carname, year, price, gear,typee,people,img,liked} = props;
     const {addFav,favList,setfavList,removeFav,settoRent}=useContext(UserContext)
    
+
+   
     const [like, setlike] = useState(liked);
   
     const toggleLike = () => {
@@ -21,13 +23,15 @@ export default function Caritem(props) {
             if(ind>-1){
                 favList.splice(ind,1);
             }
+            setlike(false)
         }
         else{
 
             addFav(props.myid)
+            setlike(true)
             //setfavList([...favList,props.myid])
         }
-            setlike(!like);
+            //setlike(!like);
             //console.log(fav)
         
         // console.log(props.myid)
@@ -64,7 +68,7 @@ export default function Caritem(props) {
                 </div>
 
             </div>
-        <div className="foot"> <div className="price"> <b style={{ fontSize: "24px" }} >{price}$</b>/ month</div> <div className="right"><div className="like" onClick={toggleLike}>{like ? <i className="fa-solid fa-heart" style={{ color: "#37c0d2" }} ></i> : <i className="fa-regular fa-heart" style={{ color: "#37c0d2" }}></i>}</div><Link to="/Rent-car" onClick={rentNow} className="btn btn-primary">Rent Now</Link></div></div>
+        <div className="foot"> <div className="price"> <b style={{ fontSize: "24px" }} >{price}$</b>/ day</div> <div className="right"><div className="like" onClick={toggleLike}>{like ? <i className="fa-solid fa-heart" style={{ color: "#37c0d2" }} ></i> : <i className="fa-regular fa-heart" style={{ color: "#37c0d2" }}></i>}</div><Link to="/Rent-car" onClick={rentNow} className="btn btn-primary">Rent Now</Link></div></div>
         </div>
     )
 }

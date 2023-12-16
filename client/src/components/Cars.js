@@ -16,7 +16,7 @@ import {
 export default function Cars(props) {
     const {pg,srctext,favorite}=props;
     //loadings imported for implementation of spinner
-    const {fetchAllCars,cars,loadings,favList,setfavList,getFav,makeAvailable}=useContext(UserContext);
+    const {fetchAllCars,cars,loadings,favList,setfavList,getFav,makeAvailable,unavailable}=useContext(UserContext);
     const [page, setpage] = useState(1);
     const [pointer,setptr] = useState(0);
     const [loading, setloading] = useState(false);
@@ -39,6 +39,7 @@ export default function Cars(props) {
         })
 
         makeAvailable();
+        //console.log(unavailable)
         
         // console.log("favorite=",favorite)
         
@@ -53,6 +54,13 @@ export default function Cars(props) {
     } ,[pointer]);
 
   
+     function isAvailable(id){
+         //console.log("YES")
+        if(unavailable && unavailable.includes(id)){
+            return false
+        }
+        return true;
+    }
 
     function isLiked(id){     
         
@@ -132,7 +140,7 @@ const Navtopage=(pge)=>{
             :car.brand.toLowerCase().includes(srctext.toLowerCase());                 
             }).map(cars =>{
                 return <div key={cars.id} className="col-md-4 my-3">
-                    <Caritem key={cars.id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} liked={isLiked(cars._id)} />
+                    <Caritem available={isAvailable(cars)} key={cars.id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} liked={isLiked(cars._id)} />
                 </div>
             })
             : favorite===true? cars.filter((car)=>{

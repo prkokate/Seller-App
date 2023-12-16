@@ -103,6 +103,13 @@ router.post("/rent-car/:id",fetchuser,async(req,res)=>{
    try{
         if(thecar.available===true){
 
+            if(thecar.owner===curuser._id){
+                success=false
+                let message="Cannot rent own car!";
+                console.log(message)
+                res.json(success,message)
+            }
+
         var curdate=new Date();
         var end=new Date();
         //console.log("days=",req.body.days)
@@ -137,14 +144,14 @@ router.post("/rent-car/:id",fetchuser,async(req,res)=>{
 
 //list-car
 router.post("/list-car",fetchuser,async(req,res)=>{
-    const {id,brand,year,price,passenger,type,gear,image}=req.body;
+    const {brand,year,price,passenger,type,gear,image}=req.body;
    try{
 
     let curuser=await User.findById(req.user.id);
 
    
     const listCar=await Caritem.create({
-        id:id,
+        id:101,
         brand:brand,
         year:year,
         price:price,
@@ -157,7 +164,7 @@ router.post("/list-car",fetchuser,async(req,res)=>{
         available:true
     })
 
-    console.log(listCar._id)
+    //console.log(listCar._id)
     await User.findByIdAndUpdate(req.user.id,{"mySale":[...curuser.mySale,listCar._id]});
 
     res.json(listCar)
@@ -175,6 +182,7 @@ router.post("/list-car",fetchuser,async(req,res)=>{
 router.put("/make-available",async(req,res)=>{
     try{
         let rented=await Caritem.find({available:false})
+
         
         let curdate=new Date()
         for(i=0;i<rented.length;i++){

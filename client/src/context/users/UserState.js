@@ -12,6 +12,7 @@ const UserState=(props)=>{
     const[fav,setfav]=useState(false)
     const[favList,setfavList]=useState([])
     const [toRent,settoRent]=useState(null);
+    const [mysale,setmysale]=useState([]);
 
 
 
@@ -168,8 +169,25 @@ const makeAvailable=async()=>{
     console.log(json)
 }
 
+
+const listCar=async({brand,year,price,passenger,type,gear,image})=>{
+    console.log(brand)
+    const response=await fetch(`${host}/api/cars/list-car`,{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json",
+            "auth-token":token
+        },
+        body:JSON.stringify({brand:brand,year:year,price:price,passenger:passenger,type:type,gear:gear,image:image})
+    })
+
+    const json=await response.json()
+    setmysale(json)
+
+}
+
     return (
-      <UserContext.Provider value={{fetchAllCars,cars,loadings,fav,addFav,favList,setfavList,getFav,removeFav,settoRent,toRent,host,makeAvailable}} >
+      <UserContext.Provider value={{fetchAllCars,cars,loadings,fav,addFav,favList,setfavList,getFav,removeFav,settoRent,toRent,host,makeAvailable,listCar,mysale}} >
             {props.children}
         </UserContext.Provider>
     )

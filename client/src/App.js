@@ -11,9 +11,11 @@ import UserContext from './context/users/UserContext';
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  Link
 } from 'react-router-dom';
 import Rentcar from './components/Rentcar';
+import Listcar from './components/Listcar';
 
 
 
@@ -39,10 +41,13 @@ export default function App() {
     <Route exact path={`/${page}`} element={<Cars srctext={search} pg={setpage}  />} />
     <Route exact path='/My-Favorites' element={<Cars srctext={search} pg={setpage} favorite={true}  />} />
     <Route exact path='/Rent-car'   element={<Rentcar srctext={search} pg={setpage}/>} />
+    <Route exact path="/List-car" element={<Listcar srctext={search} />} />
    
     
         
     </Routes>
+      <br /><br /><br />
+    <div className="outer"><Link to="/List-car" className='listcar' >List Car</Link></div>
         </Router>
     </UserState>
   </div>
