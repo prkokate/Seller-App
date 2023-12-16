@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './Caritem.css'
 import UserContext from '../context/users/UserContext';
+import {Link} from 'react-router-dom'
 
 
 
 
 export default function Caritem(props) {
     let { carname, year, price, gear,typee,people,img,liked} = props;
-    const {addFav,favList,setfavList,removeFav}=useContext(UserContext)
+    const {addFav,favList,setfavList,removeFav,settoRent}=useContext(UserContext)
    
     const [like, setlike] = useState(liked);
   
@@ -30,6 +31,11 @@ export default function Caritem(props) {
             //console.log(fav)
         
         // console.log(props.myid)
+    }
+
+    const rentNow=()=>{
+        console.log("rented in caritem=",props.myid)
+        settoRent(props.myid)
     }
 
     
@@ -58,7 +64,7 @@ export default function Caritem(props) {
                 </div>
 
             </div>
-        <div className="foot"> <div className="price"> <b style={{ fontSize: "24px" }} >{price}$</b>/ month</div> <div className="right"><div className="like" onClick={toggleLike}>{like ? <i className="fa-solid fa-heart" style={{ color: "#37c0d2" }} ></i> : <i className="fa-regular fa-heart" style={{ color: "#37c0d2" }}></i>}</div><a href="#" className="btn btn-primary">Rent Now</a></div></div>
+        <div className="foot"> <div className="price"> <b style={{ fontSize: "24px" }} >{price}$</b>/ month</div> <div className="right"><div className="like" onClick={toggleLike}>{like ? <i className="fa-solid fa-heart" style={{ color: "#37c0d2" }} ></i> : <i className="fa-regular fa-heart" style={{ color: "#37c0d2" }}></i>}</div><Link to="/Rent-car" onClick={rentNow} className="btn btn-primary">Rent Now</Link></div></div>
         </div>
     )
 }

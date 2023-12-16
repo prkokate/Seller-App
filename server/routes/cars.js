@@ -105,7 +105,9 @@ router.post("/rent-car/:id",fetchuser,async(req,res)=>{
 
         var curdate=new Date();
         var end=new Date();
+        console.log("days=",req.body.days)
         end.setDate(curdate.getDate()+req.body.days)
+        console.log("end=",end)
 
         thecar=await Cars.findByIdAndUpdate(req.params.id,{$set:{available:false,curUser:req.user.id,startDate:curdate,endDate:end}},{upsert:false,multi:false})
         thecar.available=false;
@@ -117,15 +119,18 @@ router.post("/rent-car/:id",fetchuser,async(req,res)=>{
             //Logic to remove the req.params.id from myFav list...
             await User.findByIdAndUpdate(req.user.id,{"myFav":curuser.myFav.remove(req.params.id)})
         }
-
-        res.json({success:"Booked successfully!"})
+        console.log("rented")
+        success=true
+        res.json(success)
     }
     else{
-        res.json({faliure:"Car not available!"})
+        success=false
+        res.json(success)
     }
 }catch(err){
-    console.log(err);
-    res.status(500).send("Baddest request!");
+    console.log("ERROR!:",err);
+    success=false
+    res.status(500).json(success);
 }
 })
 

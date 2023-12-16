@@ -11,6 +11,7 @@ const UserState=(props)=>{
     const[loadings,setloadings]=useState(true);
     const[fav,setfav]=useState(false)
     const[favList,setfavList]=useState([])
+    const [toRent,settoRent]=useState(null);
 
 
 
@@ -127,8 +128,33 @@ const UserState=(props)=>{
         }
 }
 
+
+
+// async function rentCar(id){
+//         try{
+//             const response=await fetch(`${host}/api/cars/rent-car/${id}`,{
+//                 method:"POST",
+//                 headers: {
+//                     "Content-Type": "application/json",
+//                     "auth-token": token
+//                 },
+//                 body:JSON.stringify({days:toRent})
+//             })
+
+//             const json=await response.json();
+//             // if(json){
+//             //     settoRent(id)
+//             // }
+//             return json
+
+//         }
+//         catch(err){
+//             console.log(err)
+//         }
+//}
+
     return (
-      <UserContext.Provider value={{fetchAllCars,cars,loadings,fav,addFav,favList,setfavList,getFav,removeFav}} >
+      <UserContext.Provider value={{fetchAllCars,cars,loadings,fav,addFav,favList,setfavList,getFav,removeFav,settoRent,toRent,host}} >
             {props.children}
         </UserContext.Provider>
     )
