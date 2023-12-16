@@ -153,8 +153,23 @@ const UserState=(props)=>{
 //         }
 //}
 
+
+
+const makeAvailable=async()=>{
+    const response=await fetch(`${host}/api/cars/make-available`,{
+        method:"PUT",
+        headers:{
+            "Content-Type":"application/json",
+            "auth-token":token
+        }
+    })
+
+    const json=await response.json()
+    console.log(json)
+}
+
     return (
-      <UserContext.Provider value={{fetchAllCars,cars,loadings,fav,addFav,favList,setfavList,getFav,removeFav,settoRent,toRent,host}} >
+      <UserContext.Provider value={{fetchAllCars,cars,loadings,fav,addFav,favList,setfavList,getFav,removeFav,settoRent,toRent,host,makeAvailable}} >
             {props.children}
         </UserContext.Provider>
     )

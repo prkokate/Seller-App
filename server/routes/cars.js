@@ -105,9 +105,9 @@ router.post("/rent-car/:id",fetchuser,async(req,res)=>{
 
         var curdate=new Date();
         var end=new Date();
-        console.log("days=",req.body.days)
+        //console.log("days=",req.body.days)
         end.setDate(curdate.getDate()+req.body.days)
-        console.log("end=",end)
+        //console.log("end=",end)
 
         thecar=await Cars.findByIdAndUpdate(req.params.id,{$set:{available:false,curUser:req.user.id,startDate:curdate,endDate:end}},{upsert:false,multi:false})
         thecar.available=false;
@@ -169,14 +169,23 @@ router.post("/list-car",fetchuser,async(req,res)=>{
 }
 })
 
+
+// function removeElem()
+
 router.put("/make-available",async(req,res)=>{
     try{
         let rented=await Caritem.find({available:false})
+        
         let curdate=new Date()
         for(i=0;i<rented.length;i++){
-            if(rented[i].endDate===curdate){
+            if(rented[i].endDate<=curdate){
+                console.log(rented[i].brand);
                 await Caritem.findByIdAndUpdate(rented[i]._id,{$set:{available:true,startDate:null,endDate:null,curUser:null}})
-                await User.findOneAndUpdate({myPurchase:rented[i]._id},{$set:{myPurchase:this.myPurchase.remove(rented[i]._id)}})
+                let curuser=await User.findOne({myPurchase:rented[i]._id});
+                let ind=curuser.myPurchase.indexOf(rented[i]._id);
+                curuser.myPurchase.splice(ind,1);
+                
+                await User.findOneAndUpdate({myPurchase:rented[i]._id},{$set:{myPurchase:curuser.myPurchase}})
             }
         }
 
