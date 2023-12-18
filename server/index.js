@@ -14,7 +14,9 @@ const MongoConnect=require("./db")
 MongoConnect();
 
 const port=8000
-
+app.get("/",(req,res)=>{
+  res.json("hello")
+})
 
 app.use("/api/auth/",require("./routes/auth"));
 app.use("/api/cars/",require("./routes/cars"));
