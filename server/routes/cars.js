@@ -13,6 +13,10 @@ const Caritem = require("../models/Caritem");
 let success=false;
 
 router.get("/all-cars",async(req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
+    res.setHeader('Access-Control-Allow-Credentials', true); // If needed
     try{
         const carArr=await Cars.find();
         //console.log(carArr)
@@ -183,6 +187,10 @@ router.post("/list-car",fetchuser,async(req,res)=>{
 // function removeElem()
 
 router.put("/make-available",async(req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
+    res.setHeader('Access-Control-Allow-Credentials', true); // If needed
     try{
         let rented=await Caritem.find({available:false})
 
