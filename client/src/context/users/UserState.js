@@ -24,7 +24,11 @@ const UserState=(props)=>{
 
                 method:"GET",
                 headers:{
-                    'Content-Type':'application/json'
+                    'Content-Type':'application/json',
+                    'Access-Control-Allow-Origin': 'https://seller-app-ebon.vercel.app',
+                    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', // If needed
+                    'Access-Control-Allow-Headers': 'X-Requested-With,content-type', // If needed
+                    'Access-Control-Allow-Credentials': true // If needed
                 }
             })
 
