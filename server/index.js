@@ -4,7 +4,7 @@ const app=express();
 const cors=require("cors")
 
 app.use(cors({
-  origin:["https://seller-app-ebon.vercel.app/"],
+  origin:["https://seller-app-ebon.vercel.app"],
   methods:["POST","GET","PUT"],
   credentials:true
 }));
