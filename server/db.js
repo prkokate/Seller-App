@@ -3,6 +3,7 @@ const mongoose=require("mongoose")
 const MongoURI=process.env.MongoURI
 
 const MongoConnect=()=>{
+    console.log(MongoURI);
     mongoose.connect(MongoURI).then(()=>{
         console.log("Connected to mongodb!");
     }).catch((err)=>{
