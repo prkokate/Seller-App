@@ -15,7 +15,7 @@ const Login = () => {
 
     const[state, setState]= useState("SignUp");
     const navigate = useNavigate();
-    const {login,getFav,setfavList,settoken}=useContext(UserContext);
+    const {login,getFav,setfavList,settoken,host}=useContext(UserContext);
 
     const handlechange=(e)=>{
 
@@ -27,7 +27,7 @@ const Login = () => {
 
     const signup= async (e)=>{
       e.preventDefault()
-      const response=await fetch(`http://localhost:8000/api/auth/sign-up`,{
+      const response=await fetch(`${host}/api/auth/sign-up`,{
         method: 'POST',
         headers:{
 
@@ -50,7 +50,7 @@ const Login = () => {
 
     const logins=async(e)=>{
       e.preventDefault()
-      const response=await fetch(`http://localhost:8000/api/auth/login`,{
+      const response=await fetch(`${host}/api/auth/login`,{
         method: 'POST',
         headers:{
 
