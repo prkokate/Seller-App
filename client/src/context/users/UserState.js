@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 const UserState=(props)=>{
 
 
-    // const host="https://seller-app-server.vercel.app";
-    const host="http://localhost:8000"
+    const host="https://seller-app-server.vercel.app";
     const [token,settoken]= useState(localStorage.getItem('token')) ;
     const initcar=[]
     const [cars, setcars]=useState(initcar);
@@ -21,12 +20,12 @@ const UserState=(props)=>{
 
     async function fetchAllCars () {
         try{
-            const response = await fetch(`${host}/api/cars/all-cars`,{
+            const response = await fetch(`/api/cars/all-cars`,{
 
                 method:"GET",
                 headers:{
                     'Content-Type':'application/json',
-                    'Access-Control-Allow-Origin': 'https://seller-app-ebon.vercel.app',
+                    'Access-Control-Allow-Origin': 'https://seller-app-server.vercel.app',
                     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', // If needed
                     'Access-Control-Allow-Headers': 'X-Requested-With,content-type', // If needed
                     'Access-Control-Allow-Credentials': true // If needed
@@ -166,7 +165,7 @@ const UserState=(props)=>{
 
 
 const makeAvailable=async()=>{
-    const response=await fetch(`${host}/api/cars/make-available`,{
+    const response=await fetch(`/api/cars/make-available`,{
         method:"PUT",
         headers:{
             "Content-Type":"application/json",
