@@ -42,11 +42,13 @@ router.get("/my-favorites",fetchuser,async(req,res)=>{
 
 router.get("/getFavList",fetchuser,async(req,res)=>{
     try{
-        let curuser=await User.findById(req.user.id);
-        const arr=curuser.myFav?curuser.myFav:[];
+        const curuser=await User.findById(req.user.id);
+        let arr=curuser.myFav?curuser.myFav:[];
         res.json(arr);
+        
     }
     catch(err){
+        console.log(err);
         return  res.status(400).send("Bad Request!");
     }
 })

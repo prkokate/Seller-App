@@ -8,6 +8,7 @@ import UserContext from '../context/users/UserContext';
 import {
    Link
   } from 'react-router-dom';
+import Spinner from './Spinner';
   
 
 
@@ -19,7 +20,7 @@ export default function Cars(props) {
     const {fetchAllCars,cars,loadings,favList,setfavList,getFav,makeAvailable,unavailable}=useContext(UserContext);
     const [page, setpage] = useState(1);
     const [pointer,setptr] = useState(0);
-    const [loading, setloading] = useState(false);
+    const [loading, setloading] = useState(true);
     const[carsAr,setCarsAr] = useState(cars.slice(pointer,pointer+6));
     const [totalpgs,settotalpgs]=useState(1)
 
@@ -32,13 +33,17 @@ export default function Cars(props) {
             setCarsAr(array.slice(pointer,pointer+6))
             settotalpgs(Math.floor(array.length/6)+array.length%6)
         })
+      if(localStorage.getItem('token')){
 
-        getFav().then(array=>{
-            //console.log(array)
-            setfavList(array)
-        })
+          getFav(localStorage.getItem('token')).then(array=>{
+            console.log("in cars array",favList)
+              //console.log(array)
+              //setfavList(array)
+          })
+      }
 
         makeAvailable();
+        setloading(false);
         //console.log(unavailable)
         
         // console.log("favorite=",favorite)
@@ -50,6 +55,7 @@ export default function Cars(props) {
     useEffect(()=>{
 
         setCarsAr(cars.slice(pointer,pointer+6));
+        setloading(false)
         
     } ,[pointer]);
 
@@ -134,25 +140,27 @@ const Navtopage=(pge)=>{
     
             {
 
+            loading?<Spinner/>
+            :
             srctext!==''? cars.filter((car)=>{
             return srctext.toLowerCase()===''
             ? car
             :car.brand.toLowerCase().includes(srctext.toLowerCase());                 
             }).map(cars =>{
                 return <div key={cars.id} className="col-md-4 my-3">
-                    <Caritem available={isAvailable(cars)} key={cars.id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} liked={isLiked(cars._id)} />
+                    <Caritem available={isAvailable(cars)} key={cars.id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} liked={localStorage.getItem('token')?isLiked(cars._id):null} />
                 </div>
             })
             : favorite===true? cars.filter((car)=>{
                     return favList.includes(car._id);
                 }).map((carfav)=>{
                     return <div key={carfav.id} className="col-md-4 my-3">
-                    <Caritem key={carfav.id} myid={carfav._id} img={carfav.image} carname={carfav.brand} year={carfav.year} price={carfav.price} gear={carfav.gear} typee={carfav.type} people={carfav.passenger} liked={isLiked(carfav._id)} />
+                    <Caritem key={carfav.id} myid={carfav._id} img={carfav.image} carname={carfav.brand} year={carfav.year} price={carfav.price} gear={carfav.gear} typee={carfav.type} people={carfav.passenger} liked={localStorage.getItem('token')?isLiked(cars._id):null} />
                 </div>
                 }) 
                 :carsAr.map((cars) =>{
                 return <div key={cars.id} className="col-md-4 my-3">
-                    <Caritem key={cars.id} myid={cars._id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} people={cars.passenger} liked={isLiked(cars._id)} />
+                    <Caritem key={cars.id} myid={cars._id} img={cars.image} carname={cars.brand} year={cars.year} price={cars.price} gear={cars.gear} typee={cars.type} people={cars.passenger} liked={localStorage.getItem('token')?isLiked(cars._id):null} />
                 </div>
                  })
                

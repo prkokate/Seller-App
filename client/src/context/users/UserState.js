@@ -1,11 +1,11 @@
 import UserContext from "./UserContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const UserState=(props)=>{
 
 
     const host="http://localhost:8000";
-    const token=localStorage.getItem('token');
+    const [token,settoken]= useState(localStorage.getItem('token')) ;
     const initcar=[]
     const [cars, setcars]=useState(initcar);
     const[loadings,setloadings]=useState(true);
@@ -14,7 +14,9 @@ const UserState=(props)=>{
     const [toRent,settoRent]=useState(null);
     const [mysale,setmysale]=useState([]);
 
-
+   useEffect(()=>{
+    settoken(localStorage.getItem('token'));
+   })
 
     async function fetchAllCars () {
         try{
@@ -43,13 +45,15 @@ const UserState=(props)=>{
 
 
 
-    async function getFav(){
+    async function getFav(tok){
+        //console.log(localStorage.getItem('token'))
         try{
+
             const response=await fetch(`${host}/api/cars/getFavList`,{
                 method:"GET",
                 headers:{
                     'Content-Type':'application/json',
-                    'auth-token':token
+                    'auth-token':tok
                 }
 
                
@@ -166,7 +170,7 @@ const makeAvailable=async()=>{
     })
 
     const json=await response.json()
-    console.log(json)
+    //console.log(json)
 }
 
 
@@ -186,8 +190,31 @@ const listCar=async({brand,year,price,passenger,type,gear,image})=>{
 
 }
 
+
+const login=async({name,username,password})=>{
+    const response=await fetch(`${host}/api/auth/login`,{
+        method: 'POST',
+        headers:{
+
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify({ name:name, username:username, password:password})
+    })
+
+    const json=await response.json();
+    if(json.success){
+        //console.log(json.Token)
+        settoken(json.Token);
+        localStorage.setItem('token',json.Token)
+        alert("Logged in successfully!")
+    }
+    else{
+        alert("Login failed!")
+    }
+}
+
     return (
-      <UserContext.Provider value={{fetchAllCars,cars,loadings,fav,addFav,favList,setfavList,getFav,removeFav,settoRent,toRent,host,makeAvailable,listCar,mysale}} >
+      <UserContext.Provider value={{login,fetchAllCars,cars,loadings,fav,addFav,favList,setfavList,getFav,removeFav,settoRent,toRent,host,makeAvailable,listCar,mysale,settoken}} >
             {props.children}
         </UserContext.Provider>
     )

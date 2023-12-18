@@ -8,10 +8,13 @@ export default function Rentcar(props) {
     const navigate=useNavigate();
     const [days,setdays]=useState(0)
     let {srctext}=props
-    const {toRent,host}=useContext(UserContext)
+    const {toRent,host,token}=useContext(UserContext)
 
 
     useEffect(()=>{
+        if(!localStorage.getItem('token')){
+            navigate("/Sign-up")
+        }
         if(srctext!==''){
             navigate("/")
         }

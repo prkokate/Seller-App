@@ -15,6 +15,7 @@ router.post("/sign-up",async(req,res)=>{
     try{
         let userExists=await User.findOne({name:req.body.name, username:req.body.username});
         if(userExists){
+            success=false;
             return res.status(500).json({success,error:"User already exists"});
         }
 
@@ -54,7 +55,7 @@ router.post("/sign-up",async(req,res)=>{
 })
 
 
-router.post("/login",fetchuser,async(req,res)=>{
+router.post("/login",async(req,res)=>{
         try{
             let userExists=await User.findOne({name:req.body.name,username:req.body.username})
             if(!userExists){

@@ -6,7 +6,7 @@ import UserContext from '../context/users/UserContext';
 export default function Listcar(props) {
 
     let {srctext}=props;
-    const {listCar}=useContext(UserContext)
+    const {listCar,token}=useContext(UserContext)
     const [car,setcar]=useState({brand:"",type:"petrol",passenger:0,year:0,gear:"Manual",price:0,image:"https://imgd.aeplcdn.com/370x208/n/cw/ec/130591/fronx-exterior-right-front-three-quarter-109.jpeg?isig=0&q=80"})
 
     const handleChange=(e)=>{
@@ -24,6 +24,9 @@ export default function Listcar(props) {
     const navigate=useNavigate();
 
     useEffect(()=>{
+        if(!token){
+            navigate('/Sign-up')
+        }
         if(srctext!=''){
             navigate("/")
         }

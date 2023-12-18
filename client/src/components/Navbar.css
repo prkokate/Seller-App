@@ -4,30 +4,55 @@
     padding: 0.5rem;
     border-radius: 1rem;
     box-shadow: 5px 10px 18px #888888;
+    /* border: 2px solid black; */
+    justify-content: space-between;
    
 }
 
 .navbar{
     background: transparent;
     
+    
 }
 
 .home{
-    margin-left: 4rem;
-    color: #0D6EFD;
-    border: 2px solid #0D6EFD;
+  
+    cursor: pointer;
+    text-decoration: none;
+    /* padding: 0;
+    border: 2px solid #0D6EFD; */
+  
+  
+
+    
 }
-.home:hover{
+/* .home:hover{
 
     background-color: #d7ddd4;
     border:2px solid #0D6EFD;
-}
-.myfav{
-    margin-left: 12.5rem;
-}
+} */
 
-@media  screen and (max-width:989px) {
+/* @media  screen and (max-width:989px) {
     .myfav,.home{
         margin-left: 0;
     }
+} */
+
+
+@media screen and (min-width:990px) {
+    .buttons{
+        display: flex;
+        /* border: 2px solid black; */
+      /* margin-left: 5%; */
+      justify-content: space-between;
+      position: absolute;
+      margin-left: 27%;
+      width: 30%!important;
+    }
+}
+.buttons{
+    display: flex;
+    width: 100%;
+    /* border: 2px solid black; */
+    justify-content: space-between;
 }

@@ -16,6 +16,7 @@ import {
 } from 'react-router-dom';
 import Rentcar from './components/Rentcar';
 import Listcar from './components/Listcar';
+import Login from './components/Login';
 
 
 
@@ -42,6 +43,7 @@ export default function App() {
     <Route exact path='/My-Favorites' element={<Cars srctext={search} pg={setpage} favorite={true}  />} />
     <Route exact path='/Rent-car'   element={<Rentcar srctext={search} pg={setpage}/>} />
     <Route exact path="/List-car" element={<Listcar srctext={search} />} />
+    <Route exact path="/Sign-up" element={<Login/>} />
    
     
         

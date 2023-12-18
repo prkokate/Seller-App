@@ -1,17 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {Menu} from 'lucide-react'
 import './Navbar.css';
 
 
 import {
-  Link
+  Link, useNavigate
 }from 'react-router-dom';
+import UserContext from '../context/users/UserContext';
 
 
 export default function Navbar(props) {
   const{srctext}=props;
+  const navigate=useNavigate();
+
+  const [logstyle,setlogstyle]=useState("btn btn-danger")
+  
 
   const [search,setsearch]=useState('');
+  const {token}=useContext(UserContext)
   const handleSearch=(e)=>{
     setsearch(e.target.value);
     srctext(e.target.value);
@@ -21,6 +27,17 @@ export default function Navbar(props) {
   const srcBrand=(brnd)=>{
     setsearch(brnd);
     srctext(brnd);
+  }
+
+  const handleLogin=()=>{
+    if(localStorage.getItem('token')){
+      localStorage.clear('token')
+      alert("You have been logged out!")
+      navigate("/Sign-up");
+    }
+    else{
+      navigate("/Sign-up")
+    }
   }
 
   return (
@@ -64,12 +81,19 @@ export default function Navbar(props) {
             <li><a className="dropdown-item" href="/more-brands">Browse More ...</a></li>
           </ul>
         </li>
-        <Link to="/"  className='nav-item btn home' >
-              Home
+        <Link to="/"  className='home nav-link' >
+                  Home
         </Link>
-        <Link to="/My-Favorites"  className='nav-item btn btn-primary myfav' >
-              My Favorites
-        </Link>
+<div className="buttons">
+  
+          <li onClick={handleLogin} id='login' className={logstyle}>
+          {localStorage.getItem('token')?"Log out":"Login"}
+          </li>
+  
+          { localStorage.getItem('token')? <Link to="/My-Favorites"  className='btn btn-primary myfav' >
+                My Favorites
+          </Link>:null}
+</div>
       </ul>
      
     </div>
