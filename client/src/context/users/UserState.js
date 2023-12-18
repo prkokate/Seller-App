@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 const UserState=(props)=>{
 
 
-    const host="https://seller-app-server.vercel.app";
+    // const host="https://seller-app-server.vercel.app";
+    const host="http://localhost:8000"
     const [token,settoken]= useState(localStorage.getItem('token')) ;
     const initcar=[]
     const [cars, setcars]=useState(initcar);
