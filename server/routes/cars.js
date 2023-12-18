@@ -23,6 +23,7 @@ router.get("/all-cars",async(req,res)=>{
         res.json(carArr)
     }
     catch(err){
+        console.log(err)
         res.status(500).send("bad request");
     }
 })

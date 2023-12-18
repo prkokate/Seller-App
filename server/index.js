@@ -2,13 +2,13 @@ const express=require("express")
 const app=express();
 
 const cors=require("cors")
+app.use(express.json())
 
 app.use(cors({
   origin:["https://seller-app-ebon.vercel.app"],
   methods:["POST","GET","PUT"],
   credentials:true
 }));
-app.use(express.json())
 
 const MongoConnect=require("./db")
 MongoConnect();
