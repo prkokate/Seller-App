@@ -44,6 +44,7 @@ router.get("/getFavList",fetchuser,async(req,res)=>{
     try{
         const curuser=await User.findById(req.user.id);
         let arr=curuser.myFav?curuser.myFav:[];
+
         res.json(arr);
         
     }
