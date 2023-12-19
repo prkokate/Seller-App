@@ -165,7 +165,7 @@ const UserState=(props)=>{
 
 
 const makeAvailable=async()=>{
-    const response=await fetch(`/api/cars/make-available`,{
+    const response=await fetch(`${host}/api/cars/make-available`,{
         method:"PUT",
         headers:{
             'Content-Type':'application/json',
