@@ -31,7 +31,7 @@ export default function Cars(props) {
         fetchAllCars().then(array=>{
             //console.log(array)
             setCarsAr(array.slice(pointer,pointer+6))
-            settotalpgs(Math.floor(array.length/6)+array.length%6)
+            settotalpgs(Math.ceil(array.length/6))
         })
       if(localStorage.getItem('token')){
 
