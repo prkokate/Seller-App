@@ -20,7 +20,7 @@ const UserState=(props)=>{
 
     async function fetchAllCars () {
         try{
-            const response = await fetch(`/api/cars/all-cars`,{
+            const response = await fetch(`${host}/api/cars/all-cars`,{
 
                 method:"GET",
                 headers:{
@@ -33,7 +33,7 @@ const UserState=(props)=>{
             })
 
             const json=await response.json();
-           // console.log(json)
+           console.log(json)
             
             setcars(json);
             return json
