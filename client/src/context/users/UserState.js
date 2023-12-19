@@ -168,8 +168,12 @@ const makeAvailable=async()=>{
     const response=await fetch(`/api/cars/make-available`,{
         method:"PUT",
         headers:{
-            "Content-Type":"application/json",
-            "auth-token":token
+            'Content-Type':'application/json',
+            'auth-token':token,
+            'Access-Control-Allow-Origin': 'https://seller-app-server.vercel.app',
+            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', // If needed
+            'Access-Control-Allow-Headers': 'X-Requested-With,content-type', // If needed
+            'Access-Control-Allow-Credentials': true // If needed
         }
     })
 
