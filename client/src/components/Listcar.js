@@ -18,6 +18,7 @@ export default function Listcar(props) {
        // console.log(car);
         listCar(car);
         navigate("/")
+        alert("Car listing successful! (Refresh to see lastest version)")
     }
     
 
