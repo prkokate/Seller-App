@@ -24,7 +24,7 @@ export default function Listcar(props) {
     const navigate=useNavigate();
 
     useEffect(()=>{
-        if(!token){
+        if(!localStorage.getItem('token')){
             navigate('/Sign-up')
         }
         if(srctext!=''){
