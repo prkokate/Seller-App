@@ -173,13 +173,13 @@ const Navtopage=(pge)=>{
         <div className="nav"> 
         <b>{page} of {totalpgs}</b> 
          <div className="nav-in"> 
-        {page>1?<Link to={`/${page-1}`} onClick={handlePrev} className="arrows navigator">&larr;</Link>:<button  disabled={true} onClick={handleNext} className="arrows navigator">&larr;</button>}
-         <Link to={`/${page}`} onClick={()=>{Navtopage(page)}} className="arrows">{page}</Link>
-         <Link to={`/${page+1<=totalpgs?page+1:page-totalpgs+1}`} onClick={()=>{Navtopage(page+1<=totalpgs?page+1:page-totalpgs+1)}} className="arrows">{page+1<=totalpgs?page+1:page-totalpgs+1}</Link>
-         <Link to={`/${page+2<=totalpgs?page+2:page-totalpgs+2}`} onClick={()=>{Navtopage(page+2<=totalpgs?page+2:page-totalpgs+2)}} className="arrows">{page+2<=totalpgs?page+2:page-totalpgs+2}</Link>
-         <Link to={`/${page+3<=totalpgs?page+3:page-totalpgs+3}`} onClick={()=>{Navtopage(page+3<=totalpgs?page+3:page-totalpgs+3)}} className="arrows">{page+3<=totalpgs?page+3:page-totalpgs+3}</Link>
-         <Link to={`/${page+4<totalpgs?page+4:page-totalpgs+4}`} onClick={()=>{Navtopage(page+4<totalpgs?page+4:page-totalpgs+4)}} className="arrows">...</Link>
-         {page<totalpgs?<Link to={`/${page+1}`} disabled={(page===totalpgs)} onClick={handleNext} className="arrows navigator">&rarr;</Link>:<button  disabled={true} onClick={handleNext} className="arrows navigator">&rarr;</button>}
+        {page>1?<button  onClick={handlePrev} className="arrows navigator">&larr;</button>:<button  disabled={true} onClick={handleNext} className="arrows navigator">&larr;</button>}
+         <button  onClick={()=>{Navtopage(page)}} className="arrows">{page}</button>
+         <button  onClick={()=>{Navtopage(page+1<=totalpgs?page+1:page-totalpgs+1)}} className="arrows">{page+1<=totalpgs?page+1:page-totalpgs+1}</button>
+         <button  onClick={()=>{Navtopage(page+2<=totalpgs?page+2:page-totalpgs+2)}} className="arrows">{page+2<=totalpgs?page+2:page-totalpgs+2}</button>
+         <button  onClick={()=>{Navtopage(page+3<=totalpgs?page+3:page-totalpgs+3)}} className="arrows">{page+3<=totalpgs?page+3:page-totalpgs+3}</button>
+         <button  onClick={()=>{Navtopage(page+4<totalpgs?page+4:page-totalpgs+4)}} className="arrows">...</button>
+         {page<totalpgs?<button  disabled={(page===totalpgs)} onClick={handleNext} className="arrows navigator">&rarr;</button>:<button  disabled={true} onClick={handleNext} className="arrows navigator">&rarr;</button>}
          </div> 
          </div>
  

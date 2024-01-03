@@ -38,8 +38,8 @@ export default function App() {
     <Routes>
   
     <Route exact path="/" element={<Cars srctext={search} pg={setpage} />} />
-    <Route exact path="/1" element={<Cars srctext={search} pg={setpage}  />} />
-    <Route exact path={`/${page}`} element={<Cars srctext={search} pg={setpage}  />} />
+    {/* <Route exact path="/1" element={<Cars srctext={search} pg={setpage}  />} />
+    <Route exact path={`/${page}`} element={<Cars srctext={search} pg={setpage}  />} /> */}
     <Route exact path='/My-Favorites' element={<Cars srctext={search} pg={setpage} favorite={true}  />} />
     <Route exact path='/Rent-car'   element={<Rentcar srctext={search} pg={setpage}/>} />
     <Route exact path="/List-car" element={<Listcar srctext={search} />} />
