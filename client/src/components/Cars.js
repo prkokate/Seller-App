@@ -17,7 +17,7 @@ import Spinner from './Spinner';
 export default function Cars(props) {
     const {pg,srctext,favorite}=props;
     //loadings imported for implementation of spinner
-    const {fetchAllCars,cars,loadings,favList,setfavList,getFav,makeAvailable,unavailable}=useContext(UserContext);
+    const {fetchAllCars,cars,loadings,favList,setfavList,getFav,makeAvailable,unavailable,setloadings}=useContext(UserContext);
     const [page, setpage] = useState(1);
     const [pointer,setptr] = useState(0);
     const [loading, setloading] = useState(true);
@@ -32,6 +32,8 @@ export default function Cars(props) {
             //console.log(array)
             setCarsAr(array.slice(pointer,pointer+6))
             settotalpgs(Math.ceil(array.length/6))
+            setloading(false);
+            setloadings(false);
         })
       if(localStorage.getItem('token')){
 
@@ -43,7 +45,7 @@ export default function Cars(props) {
       }
 
         makeAvailable();
-        setloading(false);
+       
         //console.log(unavailable)
         
         // console.log("favorite=",favorite)

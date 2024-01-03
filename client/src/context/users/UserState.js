@@ -41,9 +41,10 @@ const UserState=(props)=>{
         }catch(err){
             console.log("Error in Fetching Cars");
 
-        }finally{
-            setloadings(false);
         }
+        // finally{
+        //     setloadings(false);
+        // }
     }
 
 
@@ -222,7 +223,7 @@ const login=async({name,username,password})=>{
 }
 
     return (
-      <UserContext.Provider value={{login,fetchAllCars,cars,loadings,fav,addFav,favList,setfavList,getFav,removeFav,settoRent,toRent,host,makeAvailable,listCar,mysale,settoken}} >
+      <UserContext.Provider value={{setloadings,login,fetchAllCars,cars,loadings,fav,addFav,favList,setfavList,getFav,removeFav,settoRent,toRent,host,makeAvailable,listCar,mysale,settoken}} >
             {props.children}
         </UserContext.Provider>
     )
